@@ -4,7 +4,7 @@ import HomeView from '../view/HomeView/index.vue'
 import AboutView from '../view/AboutView/index.vue'
 
 const routes = [
-    { path: '/', component: HomeView, meta: { title: 'CSS 调试器' } },
+    { path: '/', component: HomeView, meta: { title: 'Hover' } },
     { path: '/about', component: AboutView },
 ]
 
@@ -14,6 +14,7 @@ export const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    document.title = `${to.meta.title} | Ea-animation.css`;
-    next();
+    document.title = `${to.meta.title} | Ea-effects.css`;
+
+    if (!to.hash) next();
 })

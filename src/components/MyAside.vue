@@ -46,7 +46,7 @@ ea-aside::part(container) {
       <div class="logo">
         <img src="../../public/favicon.ico" alt="" />
       </div>
-      <b class="aside-title">ea-animation</b>
+      <b class="aside-title">ea-effects</b>
     </ea-header>
     <ea-menu mode="vertical">
       <Router />

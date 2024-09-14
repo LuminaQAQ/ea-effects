@@ -1,5 +1,5 @@
 <template>
-  <my-route to="/">CSS调试器</my-route>
+  <my-route to="/">Hover</my-route>
   <my-route to="/about">AboutView</my-route>
 </template>
 
