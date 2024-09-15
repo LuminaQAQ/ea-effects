@@ -12,6 +12,29 @@
 /* #endregion */
 /* ------- end  ------- */
 
+/* ------- fillBlink 填充 ------- */
+/* #region  */
+.fillBlink {
+    transition: background-color .3s, color .3s;
+}
+
+.fillBlink:hover {
+    background-color: #409EFF;
+    color: white;
+
+    animation: fillBlink 1s infinite;
+    animation-delay: .3s;
+}
+
+@keyframes fillBlink {
+    50% {
+        background-color: #79bbff;
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
 /* ------- fillToRight 填充-向右 ------- */
 /* #region  */
 .fillToRight {
