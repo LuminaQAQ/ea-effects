@@ -69,6 +69,48 @@
 
       top: 50%;
     }
+
+    .tree {
+      position: absolute;
+      width: 10rem;
+      height: 10rem;
+      left: 50%;
+      top: -170%;
+
+      transform: rotate(30deg);
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+      }
+    }
+
+    .house {
+      position: absolute;
+      left: 56%;
+      top: 130%;
+
+      transform: rotate(35deg);
+
+      mask-image: url(../../assets/imgs/屋子.png);
+      mask-repeat: no-repeat;
+      mask-position: center center;
+      mask-size: cover;
+
+      background-color: #4c4c4c;
+
+      width: 10rem;
+      height: 10rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+      }
+    }
   }
 
   .beach {
@@ -91,6 +133,32 @@
     border-bottom-right-radius: 50%;
 
     animation: sea 4s infinite alternate-reverse ease-out;
+
+    .creation {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+      }
+    }
+
+    .star {
+      transform: rotateX(60deg);
+      top: 50%;
+
+      &:nth-of-type(1) {
+        left: 10%;
+      }
+
+      &:nth-of-type(2) {
+        left: 15%;
+      }
+    }
   }
 }
 
@@ -108,8 +176,20 @@
 <template>
   <div class="index-container">
     <section class="router-text">首页</section>
-    <section class="road"></section>
-    <section class="beach"></section>
+    <section class="road">
+      <div class="tree">
+        <img src="../../assets/imgs/树.png" alt="海星-红" />
+      </div>
+      <div class="house"></div>
+    </section>
+    <section class="beach">
+      <div class="star creation">
+        <img src="../../assets/imgs/海星-红.png" alt="海星-红" />
+      </div>
+      <div class="star creation">
+        <img src="../../assets/imgs/海星-蓝.png" alt="海星-红" />
+      </div>
+    </section>
   </div>
 </template>
 
