@@ -1,7 +1,7 @@
 <style lang="scss">
 .box {
   display: block;
-  width: 5rem;
+  width: 7rem;
   padding: 1rem;
   margin: 0 auto;
   background-color: #ebeef5;

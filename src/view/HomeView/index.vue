@@ -282,6 +282,309 @@
 }
 /* #endregion */
 /* ------- end  ------- */
+
+/* ------- skewForward 倾斜-向前 ------- */
+/* #region  */
+.skewForward {
+  transform-origin: center bottom;
+  transition: transform 0.3s;
+}
+.skewForward:hover {
+  transform: skewX(-20deg);
+}
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- skewBackward 倾斜-向后 ------- */
+/* #region  */
+.skewBackward {
+  transform-origin: center bottom;
+  transition: transform 0.3s;
+}
+.skewBackward:hover {
+  transform: skewX(20deg);
+}
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- wobbleHorizontal 摆动-水平 ------- */
+/* #region  */
+.wobbleHorizontal:hover {
+  animation: wobbleHorizontal 0.75s;
+}
+
+@keyframes wobbleHorizontal {
+  0% {
+    transform: translateX(-20%);
+  }
+  20% {
+    transform: translateX(15%);
+  }
+  40% {
+    transform: translateX(-10%);
+  }
+  60% {
+    transform: translateX(5%);
+  }
+  80% {
+    transform: translateX(-2.5%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- wobbleVertical 摆动-垂直 ------- */
+/* #region  */
+.wobbleVertical:hover {
+  animation: wobbleVertical 0.75s;
+}
+
+@keyframes wobbleVertical {
+  0% {
+    transform: translateY(-20%);
+  }
+  20% {
+    transform: translateY(15%);
+  }
+  40% {
+    transform: translateY(-10%);
+  }
+  60% {
+    transform: translateY(5%);
+  }
+  80% {
+    transform: translateY(-2.5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- wobbleToBottomRight 摆动-右下方向 ------- */
+/* #region  */
+.wobbleToBottomRight:hover {
+  animation: wobbleToBottomRight 0.75s;
+}
+
+@keyframes wobbleToBottomRight {
+  0% {
+    transform: translateY(-10%) translateX(-10%);
+  }
+  20% {
+    transform: translateY(8%) translateX(8%);
+  }
+  40% {
+    transform: translateY(-6%) translateX(-6%);
+  }
+  60% {
+    transform: translateY(4%) translateX(4%);
+  }
+  80% {
+    transform: translateY(-2%) translateX(-2%);
+  }
+  100% {
+    transform: translateY(0%) translateX(0%);
+  }
+}
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- wobbleToBottomRight 摆动-右下方向 ------- */
+/* #region  */
+.wobbleToTopRight:hover {
+  animation: wobbleToTopRight 0.75s;
+}
+
+@keyframes wobbleToTopRight {
+  0% {
+    transform: translateY(-10%) translateX(10%);
+  }
+  20% {
+    transform: translateY(8%) translateX(-8%);
+  }
+  40% {
+    transform: translateY(-6%) translateX(6%);
+  }
+  60% {
+    transform: translateY(4%) translateX(-4%);
+  }
+  80% {
+    transform: translateY(-2%) translateX(2%);
+  }
+  100% {
+    transform: translateY(0%) translateX(0%);
+  }
+}
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- puddingTop 布丁摆-底部固定 ------- */
+/* #region  */
+.puddingTop:hover {
+  transform-origin: center bottom;
+  animation: puddingTop 0.75s;
+}
+
+@keyframes puddingTop {
+  0% {
+    transform: skewX(15deg);
+  }
+  20% {
+    transform: skewX(-12deg);
+  }
+  40% {
+    transform: skewX(9deg);
+  }
+  60% {
+    transform: skewX(-6deg);
+  }
+  80% {
+    transform: skewX(3deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- puddingBottom 布丁摆-顶部固定 ------- */
+/* #region  */
+.puddingBottom:hover {
+  transform-origin: center top;
+  animation: puddingBottom 0.75s;
+}
+
+@keyframes puddingBottom {
+  0% {
+    transform: skewX(15deg);
+  }
+  20% {
+    transform: skewX(-12deg);
+  }
+  40% {
+    transform: skewX(9deg);
+  }
+  60% {
+    transform: skewX(-6deg);
+  }
+  80% {
+    transform: skewX(3deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- wobbleSkew 摇摆-倾斜 ------- */
+/* #region  */
+.wobbleSkew:hover {
+  animation: wobbleSkew 0.75s;
+}
+
+@keyframes wobbleSkew {
+  0% {
+    transform: skewX(15deg);
+  }
+  20% {
+    transform: skewX(-12deg);
+  }
+  40% {
+    transform: skewX(9deg);
+  }
+  60% {
+    transform: skewX(-6deg);
+  }
+  80% {
+    transform: skewX(3deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- buzz 抖动 ------- */
+/* #region  */
+.buzz:hover {
+  animation: buzz 0.15s infinite;
+}
+
+@keyframes buzz {
+  25% {
+    transform: skewX(-5deg);
+  }
+
+  75% {
+    transform: skewX(5deg);
+  }
+}
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- buzzOut 抖动 ------- */
+/* #region  */
+.buzzOut:hover {
+  animation: buzzOut 0.5s;
+}
+
+@keyframes buzzOut {
+  0% {
+    transform: skewX(10deg);
+  }
+
+  20% {
+    transform: skewX(-8deg);
+  }
+
+  40% {
+    transform: skewX(6deg);
+  }
+
+  60% {
+    transform: skewX(-4deg);
+  }
+
+  80% {
+    transform: skewX(2deg);
+  }
+
+  100% {
+    transform: skewX(0deg);
+  }
+}
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- forward 偏移-向右 ------- */
+/* #region  */
+.forward {
+  transition: transform 0.3s;
+}
+.forward:hover {
+  transform: translateX(20%);
+}
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- backward 偏移-向左 ------- */
+/* #region  */
+.backward {
+  transition: transform 0.3s;
+}
+.backward:hover {
+  transform: translateX(-20%);
+}
+/* #endregion */
+/* ------- end  ------- */
 </style>
 
 <template>
@@ -299,7 +602,9 @@
 <script setup>
 import SgCard from "../../components/SgCard.vue";
 
-const codes = {
+const codes = {};
+
+Object.assign(codes, {
   grow: {
     title: "放大",
     className: "grow",
@@ -524,26 +829,344 @@ const codes = {
     title: "下沉-飘动",
     className: "hang",
     code: `
-.bob {
+.hang {
   transition: transform 0.3s;
 }
-.bob:hover {
-  transform: translateY(-20%);
+.hang:hover {
+  transform: translateY(20%);
 
-  animation: bob infinite 1.5s linear;
+  animation: hang infinite 1.5s linear;
   animation-delay: 0.3s;
 }
 
-@keyframes bob {
+@keyframes hang {
   25% {
-    transform: translateY(-15%);
+    transform: translateY(15%);
   }
 
   75% {
-    transform: translateY(-25%);
+    transform: translateY(25%);
   }
 }
 `,
   },
-};
+  skewForward: {
+    title: "倾斜-向前",
+    className: "skewForward",
+    code: `
+.skewForward {
+  transform-origin: center bottom;
+  transition: transform 0.3s;
+}
+.skewForward:hover {
+  transform: skewX(-20deg);
+}
+    `,
+  },
+  skewBackward: {
+    title: "倾斜-向后",
+    className: "skewBackward",
+    code: `
+.skewBackward {
+  transform-origin: center bottom;
+  transition: transform 0.3s;
+}
+.skewBackward:hover {
+  transform: skewX(20deg);
+}
+    `,
+  },
+  wobbleHorizontal: {
+    title: "摆动-水平",
+    className: "wobbleHorizontal",
+    code: `
+
+.wobbleHorizontal:hover {
+  animation: wobbleHorizontal 0.75s;
+}
+
+@keyframes wobbleHorizontal {
+  0% {
+    transform: translateX(-20%);
+  }
+  20% {
+    transform: translateX(15%);
+  }
+  40% {
+    transform: translateX(-10%);
+  }
+  60% {
+    transform: translateX(5%);
+  }
+  80% {
+    transform: translateX(-2.5%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+    `,
+  },
+  wobbleVertical: {
+    title: "摆动-垂直",
+    className: "wobbleVertical",
+    code: `
+.wobbleVertical:hover {
+  animation: wobbleVertical 0.75s;
+}
+
+@keyframes wobbleVertical {
+  0% {
+    transform: translateY(-20%);
+  }
+  20% {
+    transform: translateY(15%);
+  }
+  40% {
+    transform: translateY(-10%);
+  }
+  60% {
+    transform: translateY(5%);
+  }
+  80% {
+    transform: translateY(-2.5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+    `,
+  },
+  wobbleToBottomRight: {
+    title: "摆动-右下方向",
+    className: "wobbleToBottomRight",
+    code: `
+.wobbleToBottomRight:hover {
+  animation: wobbleToBottomRight 0.75s;
+}
+
+@keyframes wobbleToBottomRight {
+  0% {
+    transform: translateY(-10%) translateX(-10%);
+  }
+  20% {
+    transform: translateY(8%) translateX(8%);
+  }
+  40% {
+    transform: translateY(-6%) translateX(-6%);
+  }
+  60% {
+    transform: translateY(4%) translateX(4%);
+  }
+  80% {
+    transform: translateY(-2%) translateX(-2%);
+  }
+  100% {
+    transform: translateY(0%) translateX(0%);
+  }
+}
+    `,
+  },
+  wobbleToTopRight: {
+    title: "摆动-右上方向",
+    className: "wobbleToTopRight",
+    code: `
+.wobbleToTopRight:hover {
+  animation: wobbleToTopRight 0.75s;
+}
+
+@keyframes wobbleToTopRight {
+  0% {
+    transform: translateY(-10%) translateX(10%);
+  }
+  20% {
+    transform: translateY(8%) translateX(-8%);
+  }
+  40% {
+    transform: translateY(-6%) translateX(6%);
+  }
+  60% {
+    transform: translateY(4%) translateX(-4%);
+  }
+  80% {
+    transform: translateY(-2%) translateX(2%);
+  }
+  100% {
+    transform: translateY(0%) translateX(0%);
+  }
+}
+    `,
+  },
+  puddingTop: {
+    title: "布丁摆-底部固定",
+    className: "puddingTop",
+    code: `
+.puddingTop:hover {
+  transform-origin: center bottom;
+  animation: puddingTop 0.75s;
+}
+
+@keyframes puddingTop {
+  0% {
+    transform: skewX(15deg);
+  }
+  20% {
+    transform: skewX(-12deg);
+  }
+  40% {
+    transform: skewX(9deg);
+  }
+  60% {
+    transform: skewX(-6deg);
+  }
+  80% {
+    transform: skewX(3deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+    `,
+  },
+  puddingBottom: {
+    title: "布丁摆-顶部固定",
+    className: "puddingBottom",
+    code: `
+.puddingBottom:hover {
+  transform-origin: center top;
+  animation: puddingBottom 0.75s;
+}
+
+@keyframes puddingBottom {
+  0% {
+    transform: skewX(15deg);
+  }
+  20% {
+    transform: skewX(-12deg);
+  }
+  40% {
+    transform: skewX(9deg);
+  }
+  60% {
+    transform: skewX(-6deg);
+  }
+  80% {
+    transform: skewX(3deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+    `,
+  },
+  wobbleSkew: {
+    title: "摇摆-倾斜",
+    className: "wobbleSkew",
+    code: `
+.wobbleSkew:hover {
+  animation: wobbleSkew 0.75s;
+}
+
+@keyframes wobbleSkew {
+  0% {
+    transform: skewX(15deg);
+  }
+  20% {
+    transform: skewX(-12deg);
+  }
+  40% {
+    transform: skewX(9deg);
+  }
+  60% {
+    transform: skewX(-6deg);
+  }
+  80% {
+    transform: skewX(3deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+    `,
+  },
+  buzz: {
+    title: "抖动",
+    className: "buzz",
+    code: `
+.buzz:hover {
+  animation: buzz 0.15s infinite;
+}
+
+@keyframes buzz {
+  25% {
+    transform: skewX(-5deg);
+  }
+
+  75% {
+    transform: skewX(5deg);
+  }
+}
+    `,
+  },
+  buzzOut: {
+    title: "抖动-寸止",
+    className: "buzzOut",
+    code: `
+
+.buzzOut:hover {
+  animation: buzzOut 0.5s;
+}
+
+@keyframes buzzOut {
+  0% {
+    transform: skewX(10deg);
+  }
+
+  20% {
+    transform: skewX(-8deg);
+  }
+
+  40% {
+    transform: skewX(6deg);
+  }
+
+  60% {
+    transform: skewX(-4deg);
+  }
+
+  80% {
+    transform: skewX(2deg);
+  }
+
+  100% {
+    transform: skewX(0deg);
+  }
+}
+    `,
+  },
+  forward: {
+    title: "偏移-向右",
+    className: "forward",
+    code: `
+.forward {
+  transition: transform 0.3s;
+}
+.forward:hover {
+  transform: translateX(20%);
+}
+    `,
+  },
+  backward: {
+    title: "偏移-向左",
+    className: "backward",
+    code: `
+.backward {
+  transition: transform 0.3s;
+}
+.backward:hover {
+  transform: translateX(-20%);
+}
+    `,
+  },
+});
 </script>
