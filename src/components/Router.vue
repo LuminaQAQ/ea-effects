@@ -1,5 +1,6 @@
 <template>
-  <my-route to="/">Hover</my-route>
+  <my-route to="/">首页</my-route>
+  <my-route to="/2DTransitions">Hover | 2D Transitions</my-route>
   <my-route to="/about">AboutView</my-route>
 </template>
 

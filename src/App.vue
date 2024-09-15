@@ -45,7 +45,8 @@ ea-aside {
   }
 
   .toggle-aside-btn {
-    display: block;
+    display: contents;
+    cursor: pointer;
   }
 
   .mask {
