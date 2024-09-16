@@ -335,5 +335,171 @@ Object.assign(codes, {
 }
 `,
   },
+  borderFillIn: {
+    title: "边框-内部填充",
+    className: "borderFillIn",
+    code: `
+.borderFillIn {
+    position: relative;
+    box-sizing: border-box;
+
+    transition: box-shadow .3s;
+}
+
+.borderFillIn:hover {
+    box-shadow: inset 0 0 0 5px #409EFF;
+}
+`,
+  },
+  underlineFillIn: {
+    title: "下划线-底部出现",
+    className: "underlineFillIn",
+    code: `
+.underlineFillIn {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.underlineFillIn::after {
+    content: '';
+    display: block;
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    height: 5px;
+    width: 100%;
+
+    background-color: #409EFF;
+
+    transform: translateY(5px);
+
+    transition: transform .3s;
+}
+
+.underlineFillIn:hover::after {
+    transform: translateY(0);
+}
+`,
+  },
+  overlineFillIn: {
+    title: "上划线-顶部出现",
+    className: "overlineFillIn",
+    code: `
+.overlineFillIn {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.overlineFillIn::after {
+    content: '';
+    display: block;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    height: 5px;
+    width: 100%;
+
+    background-color: #409EFF;
+
+    transform: translateY(-6px);
+
+    transition: transform .3s;
+}
+
+.overlineFillIn:hover::after {
+    transform: translateY(0);
+}
+`,
+  },
+  overlineFromLeft: {
+    title: "上划线-从左到右",
+    className: "overlineFromLeft",
+    code: `
+.overlineFromLeft {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.overlineFromLeft::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 5px;
+    width: 0;
+    background-color: #409EFF;
+
+    transition: width .3s;
+}
+
+.overlineFromLeft:hover::after {
+    width: 100%;
+}
+`,
+  },
+  overlineFromCenter: {
+    title: "上划线-从中间展开",
+    className: "overlineFromCenter",
+    code: `
+.overlineFromCenter {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.overlineFromCenter::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    height: 5px;
+    width: 0;
+    background-color: #409EFF;
+
+    transition: width .3s;
+}
+
+.overlineFromCenter:hover::after {
+    width: 100%;
+}
+`,
+  },
+  overlineFromRight: {
+    title: "上划线-从右到左",
+    className: "overlineFromRight",
+    code: `
+.overlineFromRight {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.overlineFromRight::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 5px;
+    width: 0;
+    background-color: #409EFF;
+
+    transition: width .3s;
+}
+
+.overlineFromRight:hover::after {
+    width: 100%;
+}
+`,
+  },
 });
 </script>

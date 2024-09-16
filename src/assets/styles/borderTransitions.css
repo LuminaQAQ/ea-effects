@@ -258,7 +258,7 @@
 /* #endregion */
 /* ------- end  ------- */
 
-/* ------- underlineFromLeft 下划线-从右到左 ------- */
+/* ------- underlineFromRight 下划线-从右到左 ------- */
 /* #region  */
 .underlineFromRight {
     position: relative;
@@ -280,6 +280,188 @@
 }
 
 .underlineFromRight:hover::after {
+    width: 100%;
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- borderFillIn 边框-内部填充 ------- */
+/* #region  */
+.borderFillIn {
+    position: relative;
+    box-sizing: border-box;
+
+    transition: box-shadow .3s;
+}
+
+.borderFillIn:hover {
+    box-shadow: inset 0 0 0 5px #409EFF;
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- borderFillIn 边框-内部填充 ------- */
+/* #region  */
+.borderFillIn {
+    position: relative;
+    box-sizing: border-box;
+
+    transition: box-shadow .3s;
+}
+
+.borderFillIn:hover {
+    box-shadow: inset 0 0 0 5px #409EFF;
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- underlineFillIn 下划线-底部出现 ------- */
+/* #region  */
+.underlineFillIn {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.underlineFillIn::after {
+    content: '';
+    display: block;
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    height: 5px;
+    width: 100%;
+
+    background-color: #409EFF;
+
+    transform: translateY(5px);
+
+    transition: transform .3s;
+}
+
+.underlineFillIn:hover::after {
+    transform: translateY(0);
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- overlineFillIn 上划线-顶部出现 ------- */
+/* #region  */
+.overlineFillIn {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.overlineFillIn::after {
+    content: '';
+    display: block;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    height: 5px;
+    width: 100%;
+
+    background-color: #409EFF;
+
+    transform: translateY(-6px);
+
+    transition: transform .3s;
+}
+
+.overlineFillIn:hover::after {
+    transform: translateY(0);
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- overlineFromLeft 上划线-从左到右 ------- */
+/* #region  */
+.overlineFromLeft {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.overlineFromLeft::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 5px;
+    width: 0;
+    background-color: #409EFF;
+
+    transition: width .3s;
+}
+
+.overlineFromLeft:hover::after {
+    width: 100%;
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- overlineFromCenter 上划线-从中间展开 ------- */
+/* #region  */
+.overlineFromCenter {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.overlineFromCenter::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    height: 5px;
+    width: 0;
+    background-color: #409EFF;
+
+    transition: width .3s;
+}
+
+.overlineFromCenter:hover::after {
+    width: 100%;
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- overlineFromRight 上划线-从右到左 ------- */
+/* #region  */
+.overlineFromRight {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.overlineFromRight::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 5px;
+    width: 0;
+    background-color: #409EFF;
+
+    transition: width .3s;
+}
+
+.overlineFromRight:hover::after {
     width: 100%;
 }
 
