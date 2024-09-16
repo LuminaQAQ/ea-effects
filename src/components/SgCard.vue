@@ -39,23 +39,26 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import CodeBlock from "../components/CodeBlock.vue";
 import "easy-component-ui/components/ea-card/index.js";
-import { defineProps } from "vue";
 
-const props = defineProps({
-  title: {
-    type: String,
-    default: "Card",
+export default {
+  name: "SgCard",
+  components: { CodeBlock },
+  props: {
+    title: {
+      type: String,
+      default: "Card",
+    },
+    code: {
+      type: String,
+      default: "",
+    },
+    className: {
+      type: String,
+      default: "",
+    },
   },
-  code: {
-    type: String,
-    default: "",
-  },
-  className: {
-    type: String,
-    default: "",
-  },
-});
+};
 </script>
