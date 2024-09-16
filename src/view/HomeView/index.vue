@@ -180,7 +180,7 @@
       <div class="tree">
         <img src="../../assets/imgs/树.png" alt="海星-红" />
       </div>
-      <div class="house"></div>
+      <!-- <div class="house"></div> -->
     </section>
     <section class="beach">
       <div class="star creation">

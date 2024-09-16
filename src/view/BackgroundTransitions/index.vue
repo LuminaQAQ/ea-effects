@@ -573,5 +573,278 @@ Object.assign(codes, {
 }
 `,
   },
+  rectangleIn: {
+    title: "填充-矩形聚拢",
+    className: "rectangleIn",
+    code: `
+.rectangleIn {
+    position: relative;
+
+    transform: perspective(1px);
+
+    transition: color .3s;
+
+    overflow: hidden;
+}
+
+.rectangleIn:hover {
+    color: white;
+}
+
+.rectangleIn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    width: 200%;
+    height: 200%;
+
+    z-index: -1;
+
+    transform: translate(-50%, -50%);
+
+    border: 5rem solid #409EFF;
+
+    transition: border .5s, width .5s, height .5s;
+}
+
+.rectangleIn:hover::after {
+    width: 0%;
+    height: 0%;
+}
+`,
+  },
+  rectangleOut: {
+    title: "填充-矩形展开",
+    className: "rectangleOut",
+    code: `
+.rectangleOut {
+    position: relative;
+
+    transform: perspective(1px);
+
+    transition: color .3s;
+
+    overflow: hidden;
+}
+
+.rectangleOut:hover {
+    color: white;
+}
+
+.rectangleOut::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    width: 200%;
+    height: 200%;
+
+    z-index: -1;
+
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #409EFF;
+
+    transition: transform .5s;
+}
+
+.rectangleOut:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+`,
+  },
+  shutterInHorizontal: {
+    title: "填充-百叶窗-水平聚拢",
+    className: "shutterInHorizontal",
+    code: `
+.shutterInHorizontal {
+    position: relative;
+
+    transform: perspective(1px);
+
+    transition: color .3s;
+
+    overflow: hidden;
+}
+
+.shutterInHorizontal:hover {
+    color: white;
+}
+
+.shutterInHorizontal::before,
+.shutterInHorizontal::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+
+    width: 0%;
+    height: 100%;
+
+    z-index: -1;
+
+    background-color: #409EFF;
+
+    transition: width .3s;
+}
+
+.shutterInHorizontal::before {
+    left: 0;
+}
+
+.shutterInHorizontal::after {
+    right: 0;
+}
+
+.shutterInHorizontal:hover::before,
+.shutterInHorizontal:hover::after {
+    width: 50%;
+}
+`,
+  },
+  shutterOutHorizontal: {
+    title: "填充-百叶窗-水平展开",
+    className: "shutterOutHorizontal",
+    code: `
+.shutterOutHorizontal {
+    position: relative;
+
+    transform: perspective(1px);
+
+    transition: color .3s;
+
+    overflow: hidden;
+}
+
+.shutterOutHorizontal:hover {
+    color: white;
+}
+
+.shutterOutHorizontal::before,
+.shutterOutHorizontal::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+
+    width: 0%;
+    height: 100%;
+
+    z-index: -1;
+
+    background-color: #409EFF;
+
+    transition: width .3s;
+}
+
+.shutterOutHorizontal::before {
+    left: 50%;
+}
+
+.shutterOutHorizontal::after {
+    right: 50%;
+}
+
+.shutterOutHorizontal:hover::before,
+.shutterOutHorizontal:hover::after {
+    width: 50%;
+}
+`,
+  },
+  shutterInVertical: {
+    title: "填充-百叶窗-垂直聚拢",
+    className: "shutterInVertical",
+    code: `
+.shutterInVertical {
+    position: relative;
+
+    transform: perspective(1px);
+
+    transition: color .3s;
+
+    overflow: hidden;
+}
+
+.shutterInVertical:hover {
+    color: white;
+}
+
+.shutterInVertical::before,
+.shutterInVertical::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+    height: 0;
+
+    z-index: -1;
+
+    background-color: #409EFF;
+
+    transition: height .3s;
+}
+
+.shutterInVertical::before {
+    top: 0;
+}
+
+.shutterInVertical::after {
+    bottom: 0;
+}
+
+.shutterInVertical:hover::before,
+.shutterInVertical:hover::after {
+    height: 50%;
+}
+`,
+  },
+  shutterOutVertical: {
+    title: "填充-百叶窗-垂直展开",
+    className: "shutterOutVertical",
+    code: `
+.shutterOutVertical {
+    position: relative;
+
+    transform: perspective(1px);
+
+    transition: color .3s;
+
+    overflow: hidden;
+}
+
+.shutterOutVertical:hover {
+    color: white;
+}
+
+.shutterOutVertical::before,
+.shutterOutVertical::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 100%;
+    height: 0;
+
+    z-index: -1;
+
+    background-color: #409EFF;
+
+    transition: height .3s;
+}
+
+.shutterOutVertical:hover::after {
+    height: 100%;
+}
+`,
+  },
 });
 </script>
