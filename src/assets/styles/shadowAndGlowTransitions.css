@@ -1,0 +1,150 @@
+/* ------- shadow 阴影 ------- */
+/* #region  */
+.shadow {
+
+    transition: box-shadow .3s;
+}
+
+.shadow:hover {
+    box-shadow: 0 5px 10px -1px rgba(128, 128, 128, 0.4);
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- growShadow 阴影-容器变大 ------- */
+/* #region  */
+.growShadow {
+    transition: box-shadow .3s, transform .3s;
+}
+
+.growShadow:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px -1px rgba(128, 128, 128, 0.4);
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- floatShadow 阴影-容器变大 ------- */
+/* #region  */
+.floatShadow {
+    overflow: unset;
+    position: relative;
+    transition: transform .3s;
+}
+
+.floatShadow::after {
+    content: '';
+    display: block;
+
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+    transform: translateY(100%) scaleY(0);
+    background-image: linear-gradient(to left, #ebeef5, rgb(160, 160, 160), #ebeef5);
+
+    width: 100%;
+    height: 8px;
+
+    border-radius: 50%;
+
+    transition: transform .3s;
+}
+
+.floatShadow:hover {
+    transform: translateY(-20%);
+}
+
+.floatShadow:hover::after {
+    transform: translateY(100%) scaleY(1);
+
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- glow 阴影-四散 ------- */
+/* #region  */
+.glow {
+    transition: box-shadow .3s;
+}
+
+.glow:hover {
+    box-shadow: 0 0 5px 5px rgba(128, 128, 128, 0.3);
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- shadowRadial 阴影-径向散开 ------- */
+/* #region  */
+.shadowRadial {
+    overflow: unset;
+    position: relative;
+    transition: transform .3s;
+}
+
+.shadowRadial::after,
+.shadowRadial::before {
+    content: '';
+    display: block;
+
+    position: absolute;
+    left: 0;
+    transform: scaleY(0);
+    background-image: linear-gradient(to left, #ebeef5, rgb(160, 160, 160), #ebeef5);
+
+    width: 100%;
+    height: 4px;
+
+    border-radius: 50%;
+
+    transition: transform .3s;
+}
+
+.shadowRadial::before {
+    top: 0;
+}
+
+.shadowRadial::after {
+    bottom: 0;
+}
+
+.shadowRadial:hover::before {
+    transform: scaleY(1) translateY(-3px);
+}
+
+.shadowRadial:hover::after {
+    transform: scaleY(1) translateY(3px);
+
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- boxShadowOutset 阴影-外部 ------- */
+/* #region  */
+.boxShadowOutset {
+    transition: box-shadow .3s;
+}
+
+.boxShadowOutset:hover {
+    box-shadow: 3px 3px 1px 0 rgb(160, 160, 160);
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- boxShadowInset 阴影-内部 ------- */
+/* #region  */
+.boxShadowInset {
+    transition: box-shadow .3s;
+}
+
+.boxShadowInset:hover {
+    box-shadow: inset 3px 3px 1px 0 rgb(160, 160, 160);
+}
+
+/* #endregion */
+/* ------- end  ------- */

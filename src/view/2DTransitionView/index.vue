@@ -20,27 +20,6 @@
   box-sizing: border-box;
   margin: 1rem;
 }
-
-@media screen and (max-width: 992px) {
-  .sg-card {
-    max-width: calc(33% - 2rem);
-    flex: 1 0 calc(33% - 2rem);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .sg-card {
-    max-width: calc(50% - 2rem);
-    flex: 1 0 calc(50% - 2rem);
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .sg-card {
-    max-width: calc(100% - 2rem);
-    flex: 1 0 calc(100% - 2rem);
-  }
-}
 </style>
 
 <template>

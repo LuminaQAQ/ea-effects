@@ -44,7 +44,7 @@ ea-aside::part(container) {
   <ea-aside width="200">
     <ea-header class="aside-header">
       <div class="logo">
-        <img src="../../public/favicon.ico" alt="" />
+        <img src="/favicon.ico" alt="" />
       </div>
       <b class="aside-title">ea-effects</b>
     </ea-header>
