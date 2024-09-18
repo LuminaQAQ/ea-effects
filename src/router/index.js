@@ -6,16 +6,19 @@ import TwoDTransitions from "../view/2DTransitionView/index.vue"
 import BackgroundTransitions from "../view/BackgroundTransitions/index.vue"
 import BorderTransitions from "../view/BorderTransitions/index.vue"
 import ShadowAndGlowTransitions from "../view/ShadowAndGlowTransitions/index.vue"
+import SpeechBubbles from "../view//SpeechBubbles/index.vue"
 
 import AboutView from '../view/AboutView/index.vue'
 
 const routes = [
-    { path: '/', component: HomeView, meta: { title: '主页' } },
+    // { path: '/', component: HomeView, meta: { title: '主页' } },
+    { path: '/', redirect: "/2DTransitions", meta: { title: '主页' } },
     { path: '/2DTransitions', component: TwoDTransitions, meta: { title: '2D 过渡动画' } },
     { path: '/backgroundTransitions', component: BackgroundTransitions, meta: { title: '背景过渡动画' } },
     { path: '/borderTransitions', component: BorderTransitions, meta: { title: '边框过渡动画' } },
     { path: '/shadowAndGlowTransitions', component: ShadowAndGlowTransitions, meta: { title: '阴影过渡动画' } },
-    { path: '/about', component: AboutView },
+    { path: '/speechBubbles', component: SpeechBubbles, meta: { title: '气泡框过渡动画' } },
+    // { path: '/about', component: AboutView },
 ]
 
 export const router = createRouter({

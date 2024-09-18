@@ -1,0 +1,255 @@
+/* ------- bubbleTop 气泡-上方 ------- */
+/* #region  */
+.bubbleTop {
+    position: relative;
+    overflow: unset;
+}
+
+.bubbleTop::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+
+    border: .5rem solid transparent;
+    border-bottom-width: 0rem;
+    border-bottom-color: #ebeef5;
+
+    transition: border-bottom-width .3s;
+}
+
+.bubbleTop:hover::before {
+    border-bottom-width: .5rem;
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bubbleTop 气泡-右方 ------- */
+/* #region  */
+.bubbleRight {
+    position: relative;
+    overflow: unset;
+}
+
+.bubbleRight::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 0;
+    transform: translate(100%, -50%);
+
+    border: .5rem solid transparent;
+    border-left-width: 0rem;
+    border-left-color: #ebeef5;
+
+    transition: border-left-width .3s;
+}
+
+.bubbleRight:hover::before {
+    border-left-width: .5rem;
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bubbleBottom 气泡-下方 ------- */
+/* #region  */
+.bubbleBottom {
+    position: relative;
+    overflow: unset;
+}
+
+.bubbleBottom::before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+
+    border: .5rem solid transparent;
+    border-top-width: 0rem;
+    border-top-color: #ebeef5;
+
+    transition: border-top-width .3s;
+}
+
+.bubbleBottom:hover::before {
+    border-top-width: .5rem;
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bubbleLeft 气泡-左方 ------- */
+/* #region  */
+.bubbleLeft {
+    position: relative;
+    overflow: unset;
+}
+
+.bubbleLeft::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+
+    border: .5rem solid transparent;
+    border-right-width: 0rem;
+    border-right-color: #ebeef5;
+
+    transition: border-right-width .3s;
+}
+
+.bubbleLeft:hover::before {
+    border-right-width: .5rem;
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bubbleFloatTop 气泡-向下浮动 ------- */
+/* #region  */
+.bubbleFloatTop {
+    position: relative;
+    overflow: unset;
+
+    transition: transform .3s;
+}
+
+.bubbleFloatTop::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+
+    border: .5rem solid transparent;
+    border-bottom-width: 0rem;
+    border-bottom-color: #ebeef5;
+
+    transition: border-bottom-width .3s;
+}
+
+.bubbleFloatTop:hover {
+    transform: translate(0, 1rem);
+}
+
+.bubbleFloatTop:hover::before {
+    border-bottom-width: .5rem;
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bubbleFloatRight 气泡-向右浮动 ------- */
+/* #region  */
+.bubbleFloatRight {
+    position: relative;
+    overflow: unset;
+
+    transition: transform .3s;
+}
+
+.bubbleFloatRight::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+
+    border: .5rem solid transparent;
+    border-right-width: 0rem;
+    border-right-color: #ebeef5;
+
+    transition: border-right-width .3s;
+}
+
+.bubbleFloatRight:hover {
+    transform: translate(1rem, 0);
+}
+
+.bubbleFloatRight:hover::before {
+    border-right-width: .5rem;
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bubbleFloatBottom 气泡-向上浮动 ------- */
+/* #region  */
+.bubbleFloatBottom {
+    position: relative;
+    overflow: unset;
+
+    transition: transform .3s;
+}
+
+.bubbleFloatBottom::before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+
+    border: .5rem solid transparent;
+    border-top-width: 0rem;
+    border-top-color: #ebeef5;
+
+    transition: border-top-width .3s;
+}
+
+.bubbleFloatBottom:hover {
+    transform: translate(0, -1rem);
+}
+
+.bubbleFloatBottom:hover::before {
+    border-top-width: .5rem;
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bubbleFloatLeft 气泡-向左浮动 ------- */
+/* #region  */
+.bubbleFloatLeft {
+    position: relative;
+    overflow: unset;
+
+    transition: transform .3s;
+}
+
+.bubbleFloatLeft::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 0;
+    transform: translate(100%, -50%);
+
+    border: .5rem solid transparent;
+    border-left-width: 0rem;
+    border-left-color: #ebeef5;
+
+    transition: border-left-width .3s;
+}
+
+.bubbleFloatLeft:hover {
+    transform: translate(-1rem, 0);
+}
+
+.bubbleFloatLeft:hover::before {
+    border-left-width: .5rem;
+}
+
+/* #endregion */
+/* ------- end  ------- */
