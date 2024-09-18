@@ -131,28 +131,28 @@ Object.assign(codes, {
     title: "气泡-左方",
     className: "bubbleLeft",
     code: `
-.bubbleBottom {
+.bubbleLeft {
     position: relative;
     overflow: unset;
 }
 
-.bubbleBottom::before {
+.bubbleLeft::before {
     content: '';
     position: absolute;
     display: block;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 100%);
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
 
     border: .5rem solid transparent;
-    border-top-width: 0rem;
-    border-top-color: #ebeef5;
+    border-right-width: 0rem;
+    border-right-color: #ebeef5;
 
-    transition: border-top-width .3s;
+    transition: border-right-width .3s;
 }
 
-.bubbleBottom:hover::before {
-    border-top-width: .5rem;
+.bubbleLeft:hover::before {
+    border-right-width: .5rem;
 }
 `,
   },
@@ -265,34 +265,34 @@ Object.assign(codes, {
     title: "气泡-向左浮动",
     className: "bubbleFloatLeft",
     code: `
-.bubbleFloatBottom {
+.bubbleFloatLeft {
     position: relative;
     overflow: unset;
 
     transition: transform .3s;
 }
 
-.bubbleFloatBottom::before {
+.bubbleFloatLeft::before {
     content: '';
     position: absolute;
     display: block;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 100%);
+    top: 50%;
+    right: 0;
+    transform: translate(100%, -50%);
 
     border: .5rem solid transparent;
-    border-top-width: 0rem;
-    border-top-color: #ebeef5;
+    border-left-width: 0rem;
+    border-left-color: #ebeef5;
 
-    transition: border-top-width .3s;
+    transition: border-left-width .3s;
 }
 
-.bubbleFloatBottom:hover {
-    transform: translate(0, -1rem);
+.bubbleFloatLeft:hover {
+    transform: translate(-1rem, 0);
 }
 
-.bubbleFloatBottom:hover::before {
-    border-top-width: .5rem;
+.bubbleFloatLeft:hover::before {
+    border-left-width: .5rem;
 }
 `,
   },

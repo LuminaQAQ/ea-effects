@@ -7,7 +7,7 @@ import BackgroundTransitions from "../view/BackgroundTransitions/index.vue"
 import BorderTransitions from "../view/BorderTransitions/index.vue"
 import ShadowAndGlowTransitions from "../view/ShadowAndGlowTransitions/index.vue"
 import SpeechBubbles from "../view/SpeechBubbles/index.vue"
-import Curls from "../view/curls/index.vue"
+import Curls from "../view/Curls/index.vue"
 
 import AboutView from '../view/AboutView/index.vue'
 
