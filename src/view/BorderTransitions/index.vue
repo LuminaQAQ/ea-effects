@@ -60,13 +60,31 @@ Object.assign(codes, {
     title: "空心",
     className: "hollow",
     code: `
-.fill {
-    transition: background-color .3s, color .3s;
+.hollow {
+    position: relative;
+    box-sizing: border-box;
+    perspective: 1px;
+
 }
 
-.fill:hover {
-    background-color: #409EFF;
-    color: white;
+.hollow::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+
+    z-index: -1;
+
+    transition: background-color .3s;
+}
+
+.hollow:hover::after {
+    background-color: #ffffff;
 }
 `,
   },
