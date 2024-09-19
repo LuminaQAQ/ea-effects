@@ -32,14 +32,20 @@
     <ea-card shadow="hover">
       <div slot="header" class="header">
         <span>{{ title }}</span>
+        <ea-button v-if="hasButton" @click="toggleClass">
+          点击执行动画
+        </ea-button>
       </div>
-      <span :class="`box ${className}`">{{ title }}</span>
+      <span :class="animateClassName" @animationend="animationend">{{
+        title
+      }}</span>
       <CodeBlock :code="code"></CodeBlock>
     </ea-card>
   </div>
 </template>
 
 <script>
+import { computed, ref } from "vue";
 import CodeBlock from "../components/CodeBlock.vue";
 import "easy-component-ui/components/ea-card/index.js";
 
@@ -59,6 +65,35 @@ export default {
       type: String,
       default: "",
     },
+    hasButton: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  setup(props) {
+    let isAnimated = ref(props.hasButton);
+
+    const animateClassName = computed(() => {
+      return {
+        [props.className]: isAnimated.value ? "" : props.className,
+        box: true,
+      };
+    });
+
+    const toggleClass = (e) => {
+      isAnimated.value = false;
+    };
+
+    const animationend = () => {
+      isAnimated.value = true;
+    };
+
+    return {
+      isAnimated,
+      animateClassName,
+      toggleClass,
+      animationend,
+    };
   },
 };
 </script>

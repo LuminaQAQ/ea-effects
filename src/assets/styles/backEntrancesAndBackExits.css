@@ -1,0 +1,183 @@
+/* ------- backInTop 从上出现 ------- */
+/* #region  */
+.backInTop {
+    animation: backInTop .75s;
+}
+
+@keyframes backInTop {
+    0% {
+        transform: translate(0, -100%) scale(0.6);
+    }
+
+    50% {
+        transform: translate(0, 0) scale(0.6);
+    }
+
+    100% {
+        transform: translate(0, 0)scale(1);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- backInLeft 从左出现 ------- */
+/* #region  */
+.backInLeft {
+    animation: backInLeft .75s;
+}
+
+@keyframes backInLeft {
+    0% {
+        transform: translate(-100%, 0) scale(0.6);
+    }
+
+    50% {
+        transform: translate(0, 0) scale(0.6);
+    }
+
+    100% {
+        transform: translate(0, 0)scale(1);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- backInBottom 从下出现 ------- */
+/* #region  */
+.backInBottom {
+    animation: backInBottom .75s;
+}
+
+@keyframes backInBottom {
+    0% {
+        transform: translate(0, 100%) scale(0.6);
+    }
+
+    50% {
+        transform: translate(0, 0) scale(0.6);
+    }
+
+    100% {
+        transform: translate(0, 0)scale(1);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- backInRight 从右出现 ------- */
+/* #region  */
+.backInRight {
+    animation: backInRight .75s;
+}
+
+@keyframes backInRight {
+    0% {
+        transform: translate(100%, 0) scale(0.6);
+    }
+
+    50% {
+        transform: translate(0, 0) scale(0.6);
+    }
+
+    100% {
+        transform: translate(0, 0)scale(1);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- backOutTop 从上退出 ------- */
+/* #region  */
+.backOutTop {
+    animation: backOutTop .75s;
+}
+
+@keyframes backOutTop {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 0) scale(0.6);
+    }
+
+    100% {
+        transform: translate(0, -100%) scale(0.6);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- backOutLeft 从左退出 ------- */
+/* #region  */
+.backOutLeft {
+    animation: backOutLeft .75s;
+}
+
+@keyframes backOutLeft {
+    0% {
+        transform: translate(0, 0)scale(1);
+    }
+
+    50% {
+        transform: translate(0, 0) scale(0.6);
+    }
+
+    100% {
+        transform: translate(-100%, 0) scale(0.6);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- backOutBottom 从下退出 ------- */
+/* #region  */
+.backOutBottom {
+    animation: backOutBottom .75s;
+}
+
+@keyframes backOutBottom {
+    0% {
+        transform: translate(0, 0)scale(1);
+    }
+
+    50% {
+        transform: translate(0, 0) scale(0.6);
+    }
+
+    100% {
+        transform: translate(0, 100%) scale(0.6);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- backOutRight 从右退出 ------- */
+/* #region  */
+.backOutRight {
+    animation: backOutRight .75s;
+}
+
+@keyframes backOutRight {
+    0% {
+        transform: translate(0, 0)scale(1);
+    }
+
+    50% {
+        transform: translate(0, 0) scale(0.6);
+    }
+
+    100% {
+        transform: translate(100%, 0) scale(0.6);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */

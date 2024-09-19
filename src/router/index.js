@@ -12,6 +12,7 @@ import Curls from "../view/Curls/index.vue"
 
 // Animate.css
 import AttentionSeekers from "../view/AttentionSeekers/index.vue"
+import BackEntrancesAndBackExits from "../view/BackEntrancesAndBackExits/index.vue"
 
 import AboutView from '../view/AboutView/index.vue'
 
@@ -24,7 +25,9 @@ const routes = [
     { path: '/shadowAndGlowTransitions', component: ShadowAndGlowTransitions, meta: { title: '阴影过渡动画' } },
     { path: '/speechBubbles', component: SpeechBubbles, meta: { title: '气泡框过渡动画' } },
     { path: '/curls', component: Curls, meta: { title: '折角过渡动画' } },
+
     { path: '/attentionSeekers', component: AttentionSeekers, meta: { title: '吸引眼球动画' } },
+    { path: '/backEntrancesAndBackExits', component: BackEntrancesAndBackExits, meta: { title: '后进后出动画' } },
     // { path: '/about', component: AboutView },
 ]
 
