@@ -10,6 +10,7 @@
   </my-route>
   <my-route to="/speechBubbles">Hover | 气泡框过渡动画</my-route>
   <my-route to="/curls">Hover | 折角过渡动画</my-route>
+  <my-route to="/attentionSeekers">Animate | 吸引眼球动画</my-route>
 </template>
 
 <script setup>

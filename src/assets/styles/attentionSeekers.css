@@ -1,0 +1,326 @@
+/* ------- bounce 跳跃 ------- */
+/* #region  */
+.bounce:hover {
+    animation: bounce .75s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-40%);
+    }
+
+    20% {
+        transform: translateY(0%);
+    }
+
+    40% {
+        transform: translateY(-20%);
+    }
+
+    60% {
+        transform: translateY(0%);
+    }
+
+    80% {
+        transform: translateY(-10%);
+    }
+
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- flash 闪烁 ------- */
+/* #region  */
+.flash:hover {
+    animation: flash 1s;
+}
+
+@keyframes flash {
+    25% {
+        filter: opacity(0);
+    }
+
+    50% {
+        filter: opacity(1);
+    }
+
+    75% {
+        filter: opacity(0);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- rubberBand 橡皮筋 ------- */
+/* #region  */
+.rubberBand:hover {
+    animation: rubberBand 1s;
+}
+
+@keyframes rubberBand {
+    16% {
+        transform: scaleX(1.6) scaleY(0.6);
+    }
+
+    32% {
+        transform: scaleX(1) scaleY(1);
+    }
+
+    48% {
+        transform: scaleX(1.5) scaleY(0.7);
+    }
+
+    64% {
+        transform: scaleX(1) scaleY(1);
+    }
+
+    80% {
+        transform: scaleX(1.2) scaleY(0.9);
+    }
+
+    100% {
+        transform: scaleX(1) scaleY(1);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- shakeX 抖动-水平 ------- */
+/* #region  */
+.shakeX:hover {
+    animation: shakeX 1s;
+}
+
+@keyframes shakeX {
+    12.5% {
+        transform: translateX(-10%);
+    }
+
+    25% {
+        transform: translateX(10%);
+    }
+
+    37.5% {
+        transform: translateX(-10%);
+    }
+
+    50% {
+        transform: translateX(10%);
+    }
+
+    62.5% {
+        transform: translateX(-10%);
+    }
+
+    75% {
+        transform: translateX(10%);
+    }
+
+    87.5% {
+        transform: translateX(-10%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- shakeY 抖动-垂直 ------- */
+/* #region  */
+.shakeY:hover {
+    animation: shakeY 1s;
+}
+
+@keyframes shakeY {
+    12.5% {
+        transform: translateY(-15%);
+    }
+
+    25% {
+        transform: translateY(15%);
+    }
+
+    37.5% {
+        transform: translateY(-15%);
+    }
+
+    50% {
+        transform: translateY(15%);
+    }
+
+    62.5% {
+        transform: translateY(-15%);
+    }
+
+    75% {
+        transform: translateY(15%);
+    }
+
+    87.5% {
+        transform: translateY(-15%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- headShake 摇头 ------- */
+/* #region  */
+.headShake:hover {
+    animation: headShake .5s;
+}
+
+@keyframes headShake {
+    25% {
+        transform: translateX(-10%);
+    }
+
+    50% {
+        transform: translateX(5%);
+    }
+
+    75% {
+        transform: translateX(-2.5%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- swing 秋千摆 ------- */
+/* #region  */
+.swing:hover {
+    transform-origin: center top;
+    animation: swing .75s ease-out;
+}
+
+@keyframes swing {
+    20% {
+        transform: rotate(-30deg);
+    }
+
+    40% {
+        transform: rotate(22.5deg);
+    }
+
+    60% {
+        transform: rotate(-15deg);
+    }
+
+    80% {
+        transform: rotate(7.5deg);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- tada tada🎉 ------- */
+/* #region  */
+.tada:hover {
+    animation: tada 1s;
+}
+
+@keyframes tada {
+    25% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(-15deg);
+    }
+
+    40% {
+        transform: rotate(0deg) scale(1.3);
+    }
+
+    50% {
+        transform: rotate(10deg) scale(1.3);
+    }
+
+    60% {
+        transform: rotate(-10deg) scale(1.3);
+    }
+
+    70% {
+        transform: rotate(10deg) scale(1.3);
+    }
+
+    80% {
+        transform: rotate(-10deg) scale(1.3);
+    }
+
+    90% {
+        transform: rotate(10deg) scale(1.3);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- wobble 摇晃 ------- */
+/* #region  */
+.wobble:hover {
+    animation: wobble 1s;
+}
+
+@keyframes wobble {
+
+    14% {
+        transform: rotate(-10deg) translateX(-30%);
+    }
+
+    28% {
+        transform: rotate(10deg) translateX(30%);
+    }
+
+    42% {
+        transform: rotate(-10deg) translateX(-30%);
+    }
+
+    56% {
+        transform: rotate(10deg) translateX(30%);
+    }
+
+    70% {
+        transform: rotate(-10deg) translateX(-30%);
+    }
+
+    84% {
+        transform: rotate(10deg) translateX(30%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- jello 果冻 ------- */
+/* #region  */
+.jello:hover {
+    transform-origin: center top;
+    animation: jello .75s;
+}
+
+@keyframes jello {
+
+    20% {
+        transform: skew(-20deg) rotate(-20deg);
+    }
+
+    40% {
+        transform: skew(10deg) rotate(10deg);
+    }
+
+    60% {
+        transform: skew(-5deg) rotate(-5deg);
+    }
+
+    80% {
+        transform: skew(2.5deg) rotate(2.5deg);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
