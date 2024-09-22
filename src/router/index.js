@@ -13,6 +13,7 @@ import Curls from "../view/Curls/index.vue"
 // Animate.css
 import AttentionSeekers from "../view/AttentionSeekers/index.vue"
 import BackEntrancesAndBackExits from "../view/BackEntrancesAndBackExits/index.vue"
+import BouncingEntrancesAndBouncingExits from "../view/BouncingEntrancesAndBouncingExits/index.vue"
 
 import AboutView from '../view/AboutView/index.vue'
 
@@ -28,6 +29,7 @@ const routes = [
 
     { path: '/attentionSeekers', component: AttentionSeekers, meta: { title: '吸引眼球动画' } },
     { path: '/backEntrancesAndBackExits', component: BackEntrancesAndBackExits, meta: { title: '后进后出动画' } },
+    { path: '/bouncingEntrancesAndBouncingExits', component: BouncingEntrancesAndBouncingExits, meta: { title: '后进后出动画' } },
     // { path: '/about', component: AboutView },
 ]
 

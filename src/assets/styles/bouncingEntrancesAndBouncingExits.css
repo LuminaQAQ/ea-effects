@@ -1,0 +1,295 @@
+/* ------- bounceIn 弹跳出现 ------- */
+/* #region  */
+.bounceIn {
+    animation: bounceIn .75s;
+}
+
+@keyframes bounceIn {
+    0% {
+        filter: opacity(0);
+        transform: scale(1.3);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.2);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(1.1);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bounceInDown 弹跳出现-从上方 ------- */
+/* #region  */
+.bounceInDown {
+    animation: bounceInDown .75s;
+}
+
+@keyframes bounceInDown {
+    0% {
+        transform: translateY(-500%);
+    }
+
+    20% {
+        transform: scale(1) translateY(20%);
+    }
+
+    40% {
+        transform: scale(1.2);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(1.1);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bounceInLeft 弹跳出现-从左方 ------- */
+/* #region  */
+.bounceInLeft {
+    animation: bounceInLeft .75s;
+}
+
+@keyframes bounceInLeft {
+    0% {
+        transform: translateX(-500%);
+    }
+
+    20% {
+        transform: scale(1) translateX(20%);
+    }
+
+    40% {
+        transform: scale(1.2);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(1.1);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bounceInTop 弹跳出现-从下方 ------- */
+/* #region  */
+.bounceInTop {
+    animation: bounceInTop .75s;
+}
+
+@keyframes bounceInTop {
+    0% {
+        transform: translateY(500%);
+    }
+
+    20% {
+        transform: scale(1) translateY(-20%);
+    }
+
+    40% {
+        transform: scale(1.2);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(1.1);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bounceInRight 弹跳出现-从右方 ------- */
+/* #region  */
+.bounceInRight {
+    animation: bounceInRight .75s;
+}
+
+@keyframes bounceInRight {
+    0% {
+        transform: translateX(500%);
+    }
+
+    20% {
+        transform: scale(1) translateX(-20%);
+    }
+
+    40% {
+        transform: scale(1.2);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(1.1);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bounceOut 弹跳退出 ------- */
+/* #region  */
+.bounceOut {
+    animation: bounceOut .75s;
+}
+
+@keyframes bounceOut {
+
+    20% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(0.7);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    80% {
+        transform: scale(0.6);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bounceOutDown 弹跳退出-从上方 ------- */
+/* #region  */
+.bounceOutDown {
+    animation: bounceOutDown .75s;
+}
+
+@keyframes bounceOutDown {
+    20% {
+        transform: translateY(20%);
+    }
+
+    40% {
+        transform: translateY(-10%);
+    }
+
+    60% {
+        transform: translateY(10%);
+    }
+
+    100% {
+        transform: translateY(-500%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bounceOutLeft 弹跳退出-从左方 ------- */
+/* #region  */
+.bounceOutLeft {
+    animation: bounceOutLeft .75s;
+}
+
+@keyframes bounceOutLeft {
+    20% {
+        transform: translateX(-20%);
+    }
+
+    40% {
+        transform: translateX(10%);
+    }
+
+    60% {
+        transform: translateX(-10%);
+    }
+
+    100% {
+        transform: translateX(-500%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bounceOutUp 弹跳退出-从下方 ------- */
+/* #region  */
+.bounceOutUp {
+    animation: bounceOutUp .75s;
+}
+
+@keyframes bounceOutUp {
+    20% {
+        transform: translateY(20%);
+    }
+
+    40% {
+        transform: translateY(-10%);
+    }
+
+    60% {
+        transform: translateY(10%);
+    }
+
+    100% {
+        transform: translateY(500%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- bounceOutRight 弹跳退出-从右方 ------- */
+/* #region  */
+.bounceOutRight {
+    animation: bounceOutRight .75s;
+}
+
+@keyframes bounceOutRight {
+    20% {
+        transform: translateX(20%);
+    }
+
+    40% {
+        transform: translateX(-10%);
+    }
+
+    60% {
+        transform: translateX(10%);
+    }
+
+    100% {
+        transform: translateX(500%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
