@@ -23,7 +23,7 @@
 </style>
 
 <template>
-  <h2>从后面进入</h2>
+  <h2>弹跳进入</h2>
   <section class="part">
     <template v-for="(item, index) in codesIn" :key="index">
       <SgCard
@@ -34,7 +34,7 @@
       />
     </template>
   </section>
-  <h2>从后面退出</h2>
+  <h2>弹跳退出</h2>
   <section class="part">
     <template v-for="(item, index) in codesOut" :key="index">
       <SgCard
