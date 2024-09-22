@@ -155,6 +155,70 @@ const codesIn = {
 }
 `,
   },
+  fadeInTopLeft: {
+    title: "淡入-从左上进入",
+    className: "fadeInTopLeft",
+    code: `
+.fadeInTopLeft {
+    animation: fadeInTopLeft .75s;
+}
+
+@keyframes fadeInTopLeft {
+    from {
+        filter: opacity(0);
+        transform: translate(-50%, -50%);
+    }
+}
+`,
+  },
+  fadeInTopRight: {
+    title: "淡入-从右上进入",
+    className: "fadeInTopRight",
+    code: `
+.fadeInTopRight {
+    animation: fadeInTopRight .75s;
+}
+
+@keyframes fadeInTopRight {
+    from {
+        filter: opacity(0);
+        transform: translate(50%, -50%);
+    }
+}
+`,
+  },
+  fadeInBottomLeft: {
+    title: "淡入-从左下进入",
+    className: "fadeInBottomLeft",
+    code: `
+.fadeInBottomLeft {
+    animation: fadeInBottomLeft .75s;
+}
+
+@keyframes fadeInBottomLeft {
+    from {
+        filter: opacity(0);
+        transform: translate(-50%, 50%);
+    }
+}
+`,
+  },
+  fadeInBottomRight: {
+    title: "淡入-从右下进入",
+    className: "fadeInBottomRight",
+    code: `
+.fadeInBottomRight {
+    animation: fadeInBottomRight .75s;
+}
+
+@keyframes fadeInBottomRight {
+    from {
+        filter: opacity(0);
+        transform: translate(50%, 50%);
+    }
+}
+`,
+  },
 };
 
 const codesOut = {

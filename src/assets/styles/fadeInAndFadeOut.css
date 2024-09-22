@@ -84,3 +84,67 @@
 
 /* #endregion */
 /* ------- end  ------- */
+
+/* ------- fadeInTopLeft 淡入-从左上进入 ------- */
+/* #region  */
+.fadeInTopLeft {
+    animation: fadeInTopLeft .75s;
+}
+
+@keyframes fadeInTopLeft {
+    from {
+        filter: opacity(0);
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- fadeInTopRight 淡入-从右上进入 ------- */
+/* #region  */
+.fadeInTopRight {
+    animation: fadeInTopRight .75s;
+}
+
+@keyframes fadeInTopRight {
+    from {
+        filter: opacity(0);
+        transform: translate(50%, -50%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- fadeInBottomLeft 淡入-从左下进入 ------- */
+/* #region  */
+.fadeInBottomLeft {
+    animation: fadeInBottomLeft .75s;
+}
+
+@keyframes fadeInBottomLeft {
+    from {
+        filter: opacity(0);
+        transform: translate(-50%, 50%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- fadeInBottomRight 淡入-从右下进入 ------- */
+/* #region  */
+.fadeInBottomRight {
+    animation: fadeInBottomRight .75s;
+}
+
+@keyframes fadeInBottomRight {
+    from {
+        filter: opacity(0);
+        transform: translate(50%, 50%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
