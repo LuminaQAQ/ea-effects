@@ -8,10 +8,6 @@
     from {
         filter: opacity(0);
     }
-
-    to {
-        filter: opacity(1);
-    }
 }
 
 /* #endregion */
@@ -27,6 +23,153 @@
     from {
         filter: opacity(0);
         transform: translateY(-50%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- fadeInLeft 淡入-从左进入 ------- */
+/* #region  */
+.fadeInLeft {
+    animation: fadeInLeft .75s;
+}
+
+@keyframes fadeInLeft {
+    from {
+        filter: opacity(0);
+        transform: translateX(-50%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- fadeInRight 淡入-从右进入 ------- */
+/* #region  */
+.fadeInRight {
+    animation: fadeInRight .75s;
+}
+
+@keyframes fadeInRight {
+    from {
+        filter: opacity(0);
+        transform: translateX(50%);
+    }
+
+    to {
+        filter: opacity(1);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- fadeInUp 淡入-从下进入 ------- */
+/* #region  */
+.fadeInUp {
+    animation: fadeInUp .75s;
+}
+
+@keyframes fadeInUp {
+    from {
+        filter: opacity(0);
+        transform: translateY(50%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- fadeInTopLeft 淡入-从左上进入 ------- */
+/* #region  */
+.fadeInTopLeft {
+    animation: fadeInTopLeft .75s;
+}
+
+@keyframes fadeInTopLeft {
+    from {
+        filter: opacity(0);
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- fadeInTopRight 淡入-从右上进入 ------- */
+/* #region  */
+.fadeInTopRight {
+    animation: fadeInTopRight .75s;
+}
+
+@keyframes fadeInTopRight {
+    from {
+        filter: opacity(0);
+        transform: translate(50%, -50%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- fadeInBottomLeft 淡入-从左下进入 ------- */
+/* #region  */
+.fadeInBottomLeft {
+    animation: fadeInBottomLeft .75s;
+}
+
+@keyframes fadeInBottomLeft {
+    from {
+        filter: opacity(0);
+        transform: translate(-50%, 50%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- fadeInBottomRight 淡入-从右下进入 ------- */
+/* #region  */
+.fadeInBottomRight {
+    animation: fadeInBottomRight .75s;
+}
+
+@keyframes fadeInBottomRight {
+    from {
+        filter: opacity(0);
+        transform: translate(50%, 50%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- fadeOut 淡出 ------- */
+/* #region  */
+.fadeOut {
+    animation: fadeOut .75s reverse ease-out;
+}
+
+@keyframes fadeOut {
+    from {
+        filter: opacity(0);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- fadeOutDown 淡入-向下退出 ------- */
+/* #region  */
+.fadeOutDown {
+    animation: fadeOutDown .75s reverse;
+}
+
+@keyframes fadeOutDown {
+    from {
+        filter: opacity(0);
+        transform: translateY(50%);
     }
 }
 

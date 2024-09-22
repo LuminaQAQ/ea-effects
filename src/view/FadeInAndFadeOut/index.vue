@@ -64,10 +64,6 @@ const codesIn = {
     from {
         filter: opacity(0);
     }
-
-    to {
-        filter: opacity(1);
-    }
 }
 `,
   },
@@ -222,33 +218,33 @@ const codesIn = {
 };
 
 const codesOut = {
-  bounceInRight: {
-    title: "弹跳出现-从右方",
-    className: "bounceInRight",
+  fadeOut: {
+    title: "淡出",
+    className: "fadeOut",
     code: `
-.bounceInRight {
-    animation: bounceInRight .75s;
+.fadeOut {
+    animation: fadeOut .75s reverse ease-out;
 }
 
-@keyframes bounceInRight {
-    0% {
-        transform: translateX(500%);
+@keyframes fadeOut {
+    from {
+        filter: opacity(0);
     }
+}
+`,
+  },
+  fadeOutDown: {
+    title: "淡出-向下退出",
+    className: "fadeOutDown",
+    code: `
+.fadeOutDown {
+    animation: fadeOutDown .75s reverse;
+}
 
-    20% {
-        transform: scale(1) translateX(-20%);
-    }
-
-    40% {
-        transform: scale(1.2);
-    }
-
-    60% {
-        transform: scale(1);
-    }
-
-    80% {
-        transform: scale(1.1);
+@keyframes fadeOutDown {
+    from {
+        filter: opacity(0);
+        transform: translateY(50%);
     }
 }
 `,
