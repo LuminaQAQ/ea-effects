@@ -1,0 +1,99 @@
+/* ------- rotateIn 旋转进入 ------- */
+/* #region  */
+.rotateIn {
+    animation: rotateIn .75s;
+}
+
+@keyframes rotateIn {
+    from {
+        transform: rotate(225deg);
+        filter: opacity(0);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- rotateInDownLeft 旋转进入-左下 ------- */
+/* #region  */
+.rotateInDownLeft {
+    animation: rotateInDownLeft .75s;
+}
+
+@keyframes rotateInDownLeft {
+    from {
+        transform-origin: left bottom;
+        transform: rotate(-45deg);
+        filter: opacity(0);
+    }
+
+    to {
+        transform-origin: left bottom;
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- rotateInDownLeft 旋转进入-右下 ------- */
+/* #region  */
+.rotateInDownRight {
+    animation: rotateInDownRight .75s;
+}
+
+@keyframes rotateInDownRight {
+    from {
+        transform-origin: right bottom;
+        transform: rotate(45deg);
+        filter: opacity(0);
+    }
+
+    to {
+        transform-origin: right bottom;
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- rotateInUpLeft 旋转进入-右上 ------- */
+/* #region  */
+.rotateInUpLeft {
+    animation: rotateInUpLeft .75s;
+}
+
+@keyframes rotateInUpLeft {
+    from {
+        transform-origin: left top;
+        transform: rotate(45deg);
+        filter: opacity(0);
+    }
+
+    to {
+        transform-origin: left top;
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- rotateInUpRight 旋转进入-左上 ------- */
+/* #region  */
+.rotateInUpRight {
+    animation: rotateInUpRight .75s;
+}
+
+@keyframes rotateInUpRight {
+    from {
+        transform-origin: right top;
+        transform: rotate(45deg);
+        filter: opacity(0);
+    }
+
+    to {
+        transform-origin: right top;
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
