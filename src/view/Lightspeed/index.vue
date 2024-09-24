@@ -1,5 +1,5 @@
 <style lang="scss">
-@import url(../../assets/styles/flippers.css);
+@import url(../../assets/styles/lightspeed.css);
 
 .part {
   display: flex;
@@ -40,21 +40,84 @@ import SgCard from "../../components/SgCard.vue";
 import "easy-component-ui/components/ea-button/index.js";
 
 const codes = {
-  flip: {
-    title: "翻转",
-    className: "flip",
+  lightSpeedInRight: {
+    title: "光速-从右进入",
+    className: "lightSpeedInRight",
     code: `
-.flip {
-    animation: flip .75s;
+.lightSpeedInRight {
+    animation: lightSpeedInRight .75s;
 }
 
-@keyframes flip {
-    50% {
-        transform: rotateY(180deg) scale(1.5);
+@keyframes lightSpeedInRight {
+    from {
+        transform: translateX(100%) skew(30deg);
+        filter: opacity(0);
     }
 
+    50% {
+        transform: translateX(0) skew(-30deg);
+        filter: opacity(1);
+    }
+
+    75% {
+        transform: skew(15deg);
+    }
+}
+`,
+  },
+  lightSpeedInLeft: {
+    title: "光速-从左进入",
+    className: "lightSpeedInLeft",
+    code: `
+.lightSpeedInLeft {
+    animation: lightSpeedInLeft .75s;
+}
+
+@keyframes lightSpeedInLeft {
+    from {
+        transform: translateX(-100%) skew(-30deg);
+        filter: opacity(0);
+    }
+
+    50% {
+        transform: translateX(0) skew(30deg);
+        filter: opacity(1);
+    }
+
+    75% {
+        transform: skew(-15deg);
+    }
+}
+`,
+  },
+  lightSpeedOutRight: {
+    title: "光速-向右退出",
+    className: "lightSpeedOutRight",
+    code: `
+.lightSpeedOutRight {
+    animation: lightSpeedOutRight .75s ease-in;
+}
+
+@keyframes lightSpeedOutRight {
     to {
-        transform: rotateY(360deg);
+        transform: translateX(100%) skew(30deg);
+        filter: opacity(0);
+    }
+}
+`,
+  },
+  lightSpeedOutLeft: {
+    title: "光速-向左退出",
+    className: "lightSpeedOutLeft",
+    code: `
+.lightSpeedOutLeft {
+    animation: lightSpeedOutLeft .75s ease-in;
+}
+
+@keyframes lightSpeedOutLeft {
+    to {
+        transform: translateX(-100%) skew(-30deg);
+        filter: opacity(0);
     }
 }
 `,

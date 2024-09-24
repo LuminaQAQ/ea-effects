@@ -1,0 +1,81 @@
+/* ------- lightSpeedInRight 光速-从右进入 ------- */
+/* #region  */
+.lightSpeedInRight {
+    animation: lightSpeedInRight .75s;
+}
+
+@keyframes lightSpeedInRight {
+    from {
+        transform: translateX(100%) skew(30deg);
+        filter: opacity(0);
+    }
+
+    50% {
+        transform: translateX(0) skew(-30deg);
+        filter: opacity(1);
+    }
+
+    75% {
+        transform: skew(15deg);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- lightSpeedInLeft 光速-从左进入 ------- */
+/* #region  */
+.lightSpeedInLeft {
+    animation: lightSpeedInLeft .75s;
+}
+
+@keyframes lightSpeedInLeft {
+    from {
+        transform: translateX(-100%) skew(-30deg);
+        filter: opacity(0);
+    }
+
+    50% {
+        transform: translateX(0) skew(30deg);
+        filter: opacity(1);
+    }
+
+    75% {
+        transform: skew(-15deg);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- lightSpeedOutRight 光速-向右退出 ------- */
+/* #region  */
+.lightSpeedOutRight {
+    animation: lightSpeedOutRight .75s ease-in;
+}
+
+@keyframes lightSpeedOutRight {
+    to {
+        transform: translateX(100%) skew(30deg);
+        filter: opacity(0);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- lightSpeedOutLeft 光速-向左退出 ------- */
+/* #region  */
+.lightSpeedOutLeft {
+    animation: lightSpeedOutLeft .75s ease-in;
+}
+
+@keyframes lightSpeedOutLeft {
+    to {
+        transform: translateX(-100%) skew(-30deg);
+        filter: opacity(0);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
