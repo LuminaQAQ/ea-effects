@@ -30,8 +30,9 @@ const routes = [
 
     { path: '/attentionSeekers', component: AttentionSeekers, meta: { title: '吸引眼球动画' } },
     { path: '/backEntrancesAndBackExits', component: BackEntrancesAndBackExits, meta: { title: '后进后出动画' } },
-    { path: '/bouncingEntrancesAndBouncingExits', component: BouncingEntrancesAndBouncingExits, meta: { title: '后进后出动画' } },
-    { path: '/fadeInAndFadeOut', component: FadeInAndFadeOut, meta: { title: '后进后出动画' } },
+    { path: '/bouncingEntrancesAndBouncingExits', component: BouncingEntrancesAndBouncingExits, meta: { title: '弹出弹入动画' } },
+    { path: '/fadeInAndFadeOut', component: FadeInAndFadeOut, meta: { title: '淡入淡出动画' } },
+
     // { path: '/about', component: AboutView },
 ]
 
