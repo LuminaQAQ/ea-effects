@@ -249,5 +249,117 @@ const codesOut = {
 }
 `,
   },
+  fadeOutLeft: {
+    title: "淡出-向左退出",
+    className: "fadeOutLeft",
+    code: `
+.fadeOutLeft {
+    animation: fadeOutLeft .75s reverse ease-out;
+}
+
+@keyframes fadeOutLeft {
+    from {
+        filter: opacity(0);
+        transform: translateX(-50%);
+    }
+}
+`,
+  },
+  fadeOutRight: {
+    title: "淡出-向左退出",
+    className: "fadeOutRight",
+    code: `
+.fadeOutRight {
+    animation: fadeOutRight .75s reverse ease-out;
+}
+
+@keyframes fadeOutRight {
+    from {
+        filter: opacity(0);
+        transform: translateX(50%);
+    }
+}
+`,
+  },
+  fadeOutUp: {
+    title: "淡出-向上退出",
+    className: "fadeOutUp",
+    code: `
+.fadeOutUp {
+    animation: fadeOutUp .75s reverse;
+}
+
+@keyframes fadeOutUp {
+    from {
+        filter: opacity(0);
+        transform: translateY(-50%);
+    }
+}
+`,
+  },
+  fadeOutTopLeft: {
+    title: "淡出-向左上退出",
+    className: "fadeOutTopLeft",
+    code: `
+.fadeOutTopLeft {
+    animation: fadeOutTopLeft .75s reverse;
+}
+
+@keyframes fadeOutTopLeft {
+    from {
+        filter: opacity(0);
+        transform: translate(-50%, -50%);
+    }
+}
+`,
+  },
+  fadeOutTopRight: {
+    title: "淡出-向右上退出",
+    className: "fadeOutTopRight",
+    code: `
+.fadeOutTopRight {
+    animation: fadeOutTopRight .75s reverse;
+}
+
+@keyframes fadeOutTopRight {
+    from {
+        filter: opacity(0);
+        transform: translate(50%, -50%);
+    }
+}
+`,
+  },
+  fadeOutBottomLeft: {
+    title: "淡出-向左下退出",
+    className: "fadeOutBottomLeft",
+    code: `
+.fadeOutBottomLeft {
+    animation: fadeOutBottomLeft .75s reverse;
+}
+
+@keyframes fadeOutBottomLeft {
+    from {
+        filter: opacity(0);
+        transform: translate(-50%, 50%);
+    }
+}
+`,
+  },
+  fadeOutBottomRight: {
+    title: "淡出-向左下退出",
+    className: "fadeOutBottomRight",
+    code: `
+.fadeOutBottomRight {
+    animation: fadeOutBottomRight .75s reverse;
+}
+
+@keyframes fadeOutBottomRight {
+    from {
+        filter: opacity(0);
+        transform: translate(50%, 50%);
+    }
+}
+`,
+  },
 };
 </script>
