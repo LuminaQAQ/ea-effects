@@ -1,0 +1,132 @@
+/* ------- flip 翻转 ------- */
+/* #region  */
+.flip {
+    animation: flip .75s;
+}
+
+@keyframes flip {
+    50% {
+        transform: rotateY(180deg) scale(1.5);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- flipInX 翻转-x轴 ------- */
+/* #region  */
+.flipInX {
+    animation: flipInX 1.5s;
+}
+
+@keyframes flipInX {
+    from {
+        transform: rotateX(90deg);
+        filter: opacity(0.5);
+    }
+
+    25% {
+        transform: rotateX(-25deg);
+    }
+
+    50% {
+        transform: rotateX(25deg);
+        filter: opacity(1);
+    }
+
+    75% {
+        transform: rotateX(-15deg);
+    }
+
+    to {
+        transform: rotateX(0);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- flipInY 翻转-y轴 ------- */
+/* #region  */
+.flipInY {
+    animation: flipInY 1.5s;
+}
+
+@keyframes flipInY {
+    from {
+        transform: rotateY(90deg);
+        filter: opacity(0.5);
+    }
+
+    25% {
+        transform: rotateY(-25deg);
+    }
+
+    50% {
+        transform: rotateY(25deg);
+        filter: opacity(1);
+    }
+
+    75% {
+        transform: rotateY(-15deg);
+    }
+
+    to {
+        transform: rotateY(0);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- rotateY 翻转退出-x轴 ------- */
+/* #region  */
+.flipOutX {
+    animation: flipOutX .75s ease-out;
+}
+
+@keyframes flipOutX {
+    33% {
+        transform: rotateY(45deg);
+    }
+
+    66% {
+        filter: opacity(1);
+    }
+
+    to {
+        transform: rotateY(-180deg);
+        filter: opacity(0);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- flipOutY 翻转退出-y轴 ------- */
+/* #region  */
+.flipOutY {
+    animation: flipOutY .75s ease-out;
+}
+
+@keyframes flipOutY {
+    33% {
+        transform: rotateX(45deg);
+    }
+
+    66% {
+        filter: opacity(1);
+    }
+
+    to {
+        transform: rotateX(-180deg);
+        filter: opacity(0);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */

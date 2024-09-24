@@ -16,6 +16,7 @@
     Animate | 弹出弹入动画
   </my-route>
   <my-route to="/fadeInAndFadeOut"> Animate | 淡入淡出动画 </my-route>
+  <my-route to="/flippers"> Animate | 翻转动画 </my-route>
 </template>
 
 <script setup>

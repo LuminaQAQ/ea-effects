@@ -15,6 +15,7 @@ import AttentionSeekers from "../view/AttentionSeekers/index.vue"
 import BackEntrancesAndBackExits from "../view/BackEntrancesAndBackExits/index.vue"
 import BouncingEntrancesAndBouncingExits from "../view/BouncingEntrancesAndBouncingExits/index.vue"
 import FadeInAndFadeOut from "../view/FadeInAndFadeOut/index.vue"
+import Flippers from "../view/Flippers/index.vue"
 
 import AboutView from '../view/AboutView/index.vue'
 
@@ -32,6 +33,7 @@ const routes = [
     { path: '/backEntrancesAndBackExits', component: BackEntrancesAndBackExits, meta: { title: '后进后出动画' } },
     { path: '/bouncingEntrancesAndBouncingExits', component: BouncingEntrancesAndBouncingExits, meta: { title: '弹出弹入动画' } },
     { path: '/fadeInAndFadeOut', component: FadeInAndFadeOut, meta: { title: '淡入淡出动画' } },
+    { path: '/flippers', component: Flippers, meta: { title: '翻转动画' } },
 
     // { path: '/about', component: AboutView },
 ]
