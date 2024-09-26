@@ -18,7 +18,9 @@
   <my-route to="/fadeInAndFadeOut"> Animate | 淡入淡出动画 </my-route>
   <my-route to="/flippers"> Animate | 翻转动画 </my-route>
   <my-route to="/lightspeed"> Animate | 光速动画 </my-route>
-  <my-route to="/rotatingEntrances"> Animate | 旋转动画 </my-route>
+  <my-route to="/rotatingEntrancesAndRotatingExits">
+    Animate | 旋转动画
+  </my-route>
 </template>
 
 <script setup>

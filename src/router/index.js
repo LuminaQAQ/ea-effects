@@ -17,7 +17,7 @@ import BouncingEntrancesAndBouncingExits from "../view/BouncingEntrancesAndBounc
 import FadeInAndFadeOut from "../view/FadeInAndFadeOut/index.vue"
 import Flippers from "../view/Flippers/index.vue"
 import Lightspeed from "../view/Lightspeed/index.vue"
-import RotatingEntrances from "../view/RotatingEntrances/index.vue"
+import RotatingEntrancesAndRotatingExits from "../view/rotatingEntrancesAndRotatingExits/index.vue"
 
 import AboutView from '../view/AboutView/index.vue'
 
@@ -37,7 +37,7 @@ const routes = [
     { path: '/fadeInAndFadeOut', component: FadeInAndFadeOut, meta: { title: '淡入淡出动画' } },
     { path: '/flippers', component: Flippers, meta: { title: '翻转动画' } },
     { path: '/lightspeed', component: Lightspeed, meta: { title: '光速动画' } },
-    { path: '/rotatingEntrances', component: RotatingEntrances, meta: { title: '旋转动画' } },
+    { path: '/rotatingEntrancesAndRotatingExits', component: RotatingEntrancesAndRotatingExits, meta: { title: '旋转动画' } },
 
     // { path: '/about', component: AboutView },
 ]

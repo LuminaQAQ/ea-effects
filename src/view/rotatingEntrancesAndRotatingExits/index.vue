@@ -1,5 +1,62 @@
-/* ------- rotateIn 旋转进入 ------- */
-/* #region  */
+<style lang="scss">
+@import url(../../assets/styles/rotatingEntrances.css);
+
+.part {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+
+  & > .sg-card {
+    box-sizing: border-box;
+    height: 100%;
+  }
+}
+.sg-card {
+  max-width: calc(25% - 2rem);
+  flex: 1 0 calc(25% - 2rem);
+  align-self: stretch;
+
+  box-sizing: border-box;
+  margin: 1rem;
+}
+</style>
+
+<template>
+  <h2>进入</h2>
+  <section class="part">
+    <template v-for="(item, index) in entrances" :key="index">
+      <SgCard
+        :title="item.title"
+        :code="item.code"
+        :className="item.className"
+        :hasButton="true"
+      />
+    </template>
+  </section>
+
+  <h2>退出</h2>
+  <section class="part">
+    <template v-for="(item, index) in exits" :key="index">
+      <SgCard
+        :title="item.title"
+        :code="item.code"
+        :className="item.className"
+        :hasButton="true"
+      />
+    </template>
+  </section>
+</template>
+
+<script setup>
+import SgCard from "../../components/SgCard.vue";
+import "easy-component-ui/components/ea-button/index.js";
+
+const entrances = {
+  rotateIn: {
+    title: "旋转进入",
+    className: "rotateIn",
+    code: `
 .rotateIn {
     animation: rotateIn .75s;
 }
@@ -10,12 +67,12 @@
         filter: opacity(0);
     }
 }
-
-/* #endregion */
-/* ------- end  ------- */
-
-/* ------- rotateInDownLeft 旋转进入-左下 ------- */
-/* #region  */
+`,
+  },
+  rotateInDownLeft: {
+    title: "旋转进入-左下",
+    className: "rotateInDownLeft",
+    code: `
 .rotateInDownLeft {
     animation: rotateInDownLeft .75s;
 }
@@ -31,39 +88,18 @@
         transform-origin: left bottom;
     }
 }
-
-/* #endregion */
-/* ------- end  ------- */
-
-/* ------- rotateInDownLeft 旋转进入-右下 ------- */
-/* #region  */
+`,
+  },
+  rotateInUpLeft: {
+    title: "旋转进入-右上",
+    className: "rotateInUpLeft",
+    code: `
 .rotateInDownRight {
     animation: rotateInDownRight .75s;
 }
 
 @keyframes rotateInDownRight {
     from {
-        transform-origin: right bottom;
-        transform: rotate(45deg);
-        filter: opacity(0);
-    }
-
-    to {
-        transform-origin: right bottom;
-    }
-}
-
-/* #endregion */
-/* ------- end  ------- */
-
-/* ------- rotateInUpLeft 旋转进入-右上 ------- */
-/* #region  */
-.rotateInUpLeft {
-    animation: rotateInUpLeft .75s;
-}
-
-@keyframes rotateInUpLeft {
-    from {
         transform-origin: left top;
         transform: rotate(45deg);
         filter: opacity(0);
@@ -73,12 +109,12 @@
         transform-origin: left top;
     }
 }
-
-/* #endregion */
-/* ------- end  ------- */
-
-/* ------- rotateInUpRight 旋转进入-左上 ------- */
-/* #region  */
+`,
+  },
+  rotateInUpRight: {
+    title: "旋转进入-右上",
+    className: "rotateInUpRight",
+    code: `
 .rotateInUpRight {
     animation: rotateInUpRight .75s;
 }
@@ -94,12 +130,15 @@
         transform-origin: right top;
     }
 }
+`,
+  },
+};
 
-/* #endregion */
-/* ------- end  ------- */
-
-/* ------- rotateOut 旋转退出 ------- */
-/* #region  */
+const exits = {
+  rotateOut: {
+    title: "旋转退出",
+    className: "rotateOut",
+    code: `
 .rotateOut {
     animation: rotateOut .75s;
 }
@@ -110,12 +149,12 @@
         filter: opacity(0);
     }
 }
-
-/* #endregion */
-/* ------- end  ------- */
-
-/* ------- rotateOutUpLeft 旋转退出-左上 ------- */
-/* #region  */
+`,
+  },
+  rotateOutUpLeft: {
+    title: "旋转退出-左上",
+    className: "rotateOutUpLeft",
+    code: `
 .rotateOutUpLeft {
     animation: rotateOutUpLeft .75s;
 }
@@ -131,12 +170,12 @@
         filter: opacity(0);
     }
 }
-
-/* #endregion */
-/* ------- end  ------- */
-
-/* ------- rotateOutUpRight 旋转退出-右上 ------- */
-/* #region  */
+`,
+  },
+  rotateOutUpRight: {
+    title: "旋转退出-右上",
+    className: "rotateOutUpRight",
+    code: `
 .rotateOutUpRight {
     animation: rotateOutUpRight .75s;
 }
@@ -152,12 +191,12 @@
         filter: opacity(0);
     }
 }
-
-/* #endregion */
-/* ------- end  ------- */
-
-/* ------- rotateOutDownLeft 旋转退出-左下 ------- */
-/* #region  */
+`,
+  },
+  rotateOutDownLeft: {
+    title: "旋转退出-右下",
+    className: "rotateOutDownLeft",
+    code: `
 .rotateOutDownLeft {
     animation: rotateOutDownLeft .75s;
 }
@@ -173,12 +212,12 @@
         filter: opacity(0);
     }
 }
-
-/* #endregion */
-/* ------- end  ------- */
-
-/* ------- rotateOutDownRight 旋转退出-右下 ------- */
-/* #region  */
+`,
+  },
+  rotateOutDownRight: {
+    title: "旋转退出-右下",
+    className: "rotateOutDownRight",
+    code: `
 .rotateOutDownRight {
     animation: rotateOutDownRight .75s;
 }
@@ -194,6 +233,7 @@
         filter: opacity(0);
     }
 }
-
-/* #endregion */
-/* ------- end  ------- */
+`,
+  },
+};
+</script>
