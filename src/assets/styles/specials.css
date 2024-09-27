@@ -1,0 +1,107 @@
+/* ------- hinge 铰链 ------- */
+/* #region  */
+.hinge {
+    animation: hinge 2.5s;
+}
+
+@keyframes hinge {
+    0% {
+        transform-origin: left top;
+    }
+
+    10% {
+        transform: rotate(75deg);
+    }
+
+    20% {
+        transform: rotate(45deg);
+    }
+
+    30% {
+        transform: rotate(75deg);
+    }
+
+    40% {
+        transform: rotate(60deg) translateY(0) translateX(0);
+    }
+
+    100% {
+        transform-origin: left top;
+        transform: rotate(60deg) translateY(500%) translateX(500%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- jackInTheBox 跳跳盒 ------- */
+/* #region  */
+.jackInTheBox {
+    animation: jackInTheBox .5s;
+}
+
+@keyframes jackInTheBox {
+    0% {
+        scale: 0;
+    }
+
+    20% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-10deg);
+        scale: 1.2;
+    }
+
+    60% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- rollIn 翻滚-进入 ------- */
+/* #region  */
+.rollIn {
+    animation: rollIn 1s;
+}
+
+@keyframes rollIn {
+    0% {
+        transform-origin: left bottom;
+        transform: translateX(-100%) rotate(-125deg);
+    }
+
+    100% {
+        transform-origin: left bottom;
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- rollOut 翻滚-退出 ------- */
+/* #region  */
+.rollOut {
+    animation: rollOut 1s;
+}
+
+@keyframes rollOut {
+    0% {
+        transform-origin: right bottom;
+    }
+
+    100% {
+        transform-origin: right bottom;
+        transform: translateX(100%) rotate(125deg);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */

@@ -21,6 +21,7 @@
   <my-route to="/rotatingEntrancesAndRotatingExits">
     Animate | 旋转动画
   </my-route>
+  <my-route to="/specials"> Animate | 特殊效果 </my-route>
 </template>
 
 <script setup>
