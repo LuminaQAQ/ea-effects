@@ -1,0 +1,173 @@
+/* ------- zoomIn 放大-出现 ------- */
+/* #region  */
+.zoomIn {
+    animation: zoomIn .5s;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- zoomInUp 放大-从上出现 ------- */
+/* #region  */
+.zoomInUp {
+    animation: zoomInUp .5s ease-in;
+}
+
+@keyframes zoomInUp {
+    from {
+        transform: scale(0) translateY(-500%);
+    }
+
+    80% {
+        transform: scale(.8) translateY(20%);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- zoomInLeft 放大-从左出现 ------- */
+/* #region  */
+.zoomInLeft {
+    animation: zoomInLeft .5s ease-in;
+}
+
+@keyframes zoomInLeft {
+    from {
+        transform: scale(0) translateX(-500%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- zoomInRight 放大-从右出现 ------- */
+/* #region  */
+.zoomInRight {
+    animation: zoomInRight .5s ease-in;
+}
+
+@keyframes zoomInRight {
+    from {
+        transform: scale(0) translateX(500%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- zoomInDown 放大-从下出现 ------- */
+/* #region  */
+.zoomInDown {
+    animation: zoomInDown .5s ease-in;
+}
+
+@keyframes zoomInDown {
+    from {
+        transform: scale(0) translateY(500%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- zoomOut 缩放-退出 ------- */
+/* #region  */
+.zoomOut {
+    animation: zoomOut .5s;
+}
+
+@keyframes zoomOut {
+    to {
+        transform: scale(0);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- zoomOutUp 放大-从上退出 ------- */
+/* #region  */
+.zoomOutUp {
+    animation: zoomOutUp .75s ease-in;
+}
+
+@keyframes zoomOutUp {
+    50% {
+        transform: scale(.5);
+    }
+
+    to {
+        transform: translateY(-1000%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- zoomOutLeft 放大-从左退出 ------- */
+/* #region  */
+.zoomOutLeft {
+    animation: zoomOutLeft .75s ease-in;
+}
+
+@keyframes zoomOutLeft {
+    50% {
+        transform: scale(0.5);
+    }
+
+    to {
+        transform: scale(0) translateX(-1000%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- zoomOutRight 放大-从右退出 ------- */
+/* #region  */
+.zoomOutRight {
+    animation: zoomOutRight .75s ease-in;
+}
+
+@keyframes zoomOutRight {
+    50% {
+        transform: scale(0.5);
+    }
+
+    to {
+        transform: scale(0) translateX(1000%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- zoomOutDown 放大-从下退出 ------- */
+/* #region  */
+.zoomOutDown {
+    animation: zoomOutDown .75s ease-in;
+}
+
+@keyframes zoomOutDown {
+    50% {
+        transform: scale(0.5);
+    }
+
+    to {
+        transform: scale(0) translateY(1000%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */

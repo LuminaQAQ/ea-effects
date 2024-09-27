@@ -1,5 +1,5 @@
 <style lang="scss">
-@import url(../../assets/styles/specials.css);
+@import url(../../assets/styles/zoomingEntrancesAndZoomingExits.css);
 
 .part {
   display: flex;
@@ -23,8 +23,20 @@
 </style>
 
 <template>
+  <h2>缩放进入</h2>
   <section class="part">
-    <template v-for="(item, index) in codes" :key="index">
+    <template v-for="(item, index) in zoomingIn" :key="index">
+      <SgCard
+        :title="item.title"
+        :code="item.code"
+        :className="item.className"
+        :hasButton="true"
+      />
+    </template>
+  </section>
+  <h2>缩放退出</h2>
+  <section class="part">
+    <template v-for="(item, index) in zoomingOut" :key="index">
       <SgCard
         :title="item.title"
         :code="item.code"
@@ -39,111 +51,182 @@
 import SgCard from "../../components/SgCard.vue";
 import "easy-component-ui/components/ea-button/index.js";
 
-const codes = {
-  hinge: {
-    title: "铰链",
-    className: "hinge",
+const zoomingIn = {
+  zoomIn: {
+    title: "放大-出现",
+    className: "zoomIn",
     code: `
-.hinge {
-    animation: hinge 2.5s;
+.zoomIn {
+    animation: zoomIn .5s;
 }
 
-@keyframes hinge {
-    0% {
-        transform-origin: left top;
-    }
-
-    10% {
-        transform: rotate(75deg);
-    }
-
-    20% {
-        transform: rotate(45deg);
-    }
-
-    30% {
-        transform: rotate(75deg);
-    }
-
-    40% {
-        transform: rotate(60deg) translateY(0) translateX(0);
-    }
-
-    100% {
-        transform-origin: left top;
-        transform: rotate(60deg) translateY(500%) translateX(500%);
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
     }
 }
 `,
   },
-  jackInTheBox: {
-    title: "跳跳盒",
-    className: "jackInTheBox",
+  zoomInUp: {
+    title: "放大-从上出现",
+    className: "zoomInUp",
     code: `
-.jackInTheBox {
-    animation: jackInTheBox .5s;
+.zoomInDown {
+    animation: zoomInDown .5s ease-in;
 }
 
-@keyframes jackInTheBox {
-    0% {
-        scale: 0;
+@keyframes zoomInDown {
+    from {
+        transform: center bottom;
+        transform: scale(0) translateY(-500%);
     }
 
-    20% {
-        transform: rotate(15deg);
+    80% {
+        transform: scale(.8) translateY(20%);
     }
 
-    40% {
-        transform: rotate(-10deg);
-        scale: 1.2;
-    }
-
-    60% {
-        transform: rotate(5deg);
-    }
-
-    100% {
-        scale: 1;
+    to {
+        transform: center bottom;
+        transform: scale(1);
     }
 }
 `,
   },
-  rollIn: {
-    title: "翻滚-进入",
-    className: "rollIn",
+  zoomInLeft: {
+    title: "放大-从左出现",
+    className: "zoomInLeft",
     code: `
-.rollIn {
-    animation: rollIn 1s;
+.zoomInLeft {
+    animation: zoomInLeft .5s ease-in;
 }
 
-@keyframes rollIn {
-    0% {
-        transform-origin: left bottom;
-        transform: translateX(-100%) rotate(-125deg);
-    }
-
-    100% {
-        transform-origin: left bottom;
+@keyframes zoomInLeft {
+    from {
+        transform: scale(0) translateX(-500%);
     }
 }
 `,
   },
-  rollOut: {
-    title: "翻滚-退出",
-    className: "rollOut",
+  zoomInRight: {
+    title: "放大-从右出现",
+    className: "zoomInRight",
     code: `
-.rollOut {
-    animation: rollOut 1s;
+.zoomInRight {
+    animation: zoomInRight .5s ease-in;
 }
 
-@keyframes rollOut {
-    0% {
-        transform-origin: right bottom;
+@keyframes zoomInRight {
+    from {
+        transform: scale(0) translateX(500%);
+    }
+}
+`,
+  },
+  zoomInDown: {
+    title: "放大-从下出现",
+    className: "zoomInDown",
+    code: `
+.zoomInDown {
+    animation: zoomInDown .5s ease-in;
+}
+
+@keyframes zoomInDown {
+    from {
+        transform: scale(0) translateY(500%);
+    }
+}
+  `,
+  },
+};
+
+const zoomingOut = {
+  zoomOut: {
+    title: "放大-退出",
+    className: "zoomOut",
+    code: `
+.zoomOut {
+    animation: zoomOut .5s;
+}
+
+@keyframes zoomOut {
+    to {
+        transform: scale(0);
+    }
+}
+`,
+  },
+  zoomOutUp: {
+    title: "放大-从上退出",
+    className: "zoomOutUp",
+    code: `
+.zoomOutUp {
+    animation: zoomOutUp .75s ease-in;
+}
+
+@keyframes zoomOutUp {
+    50% {
+        transform: scale(.5);
     }
 
-    100% {
-        transform-origin: right bottom;
-        transform: translateX(100%) rotate(125deg);
+    to {
+        transform: translateY(-1000%);
+    }
+}
+`,
+  },
+  zoomOutLeft: {
+    title: "放大-从左退出",
+    className: "zoomOutLeft",
+    code: `
+.zoomOutLeft {
+    animation: zoomOutLeft .75s ease-in;
+}
+
+@keyframes zoomOutLeft {
+    50% {
+        transform: scale(0.5);
+    }
+
+    to {
+        transform: scale(0) translateX(-1000%);
+    }
+}
+`,
+  },
+  zoomOutRight: {
+    title: "放大-从右退出",
+    className: "zoomOutRight",
+    code: `
+.zoomOutRight {
+    animation: zoomOutRight .75s ease-in;
+}
+
+@keyframes zoomOutRight {
+    50% {
+        transform: scale(0.5);
+    }
+
+    to {
+        transform: scale(0) translateX(1000%);
+    }
+}
+`,
+  },
+  zoomOutDown: {
+    title: "放大-从下退出",
+    className: "zoomOutDown",
+    code: `
+.zoomOutDown {
+    animation: zoomOutDown .75s ease-in;
+}
+
+@keyframes zoomOutDown {
+    50% {
+        transform: scale(0.5);
+    }
+
+    to {
+        transform: scale(0) translateY(1000%);
     }
 }
 `,

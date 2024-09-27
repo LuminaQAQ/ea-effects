@@ -19,6 +19,7 @@ import Flippers from "../view/Flippers/index.vue"
 import Lightspeed from "../view/Lightspeed/index.vue"
 import RotatingEntrancesAndRotatingExits from "../view/rotatingEntrancesAndRotatingExits/index.vue"
 import Specials from "../view/specials/index.vue"
+import ZoomingEntrancesAndZoomingExits from "../view/zoomingEntrancesAndZoomingExits/index.vue"
 
 import AboutView from '../view/AboutView/index.vue'
 
@@ -40,7 +41,7 @@ const routes = [
     { path: '/lightspeed', component: Lightspeed, meta: { title: '光速动画' } },
     { path: '/rotatingEntrancesAndRotatingExits', component: RotatingEntrancesAndRotatingExits, meta: { title: '旋转动画' } },
     { path: '/specials', component: Specials, meta: { title: '特殊效果' } },
-    { path: '/zoomingEntrancesAndZoomingExits', component: Specials, meta: { title: '特殊效果' } },
+    { path: '/zoomingEntrancesAndZoomingExits', component: ZoomingEntrancesAndZoomingExits, meta: { title: '放大缩小动画' } },
 
     // { path: '/about', component: AboutView },
 ]
