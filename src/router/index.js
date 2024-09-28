@@ -17,9 +17,10 @@ import BouncingEntrancesAndBouncingExits from "../view/BouncingEntrancesAndBounc
 import FadeInAndFadeOut from "../view/FadeInAndFadeOut/index.vue"
 import Flippers from "../view/Flippers/index.vue"
 import Lightspeed from "../view/Lightspeed/index.vue"
-import RotatingEntrancesAndRotatingExits from "../view/rotatingEntrancesAndRotatingExits/index.vue"
-import Specials from "../view/specials/index.vue"
-import ZoomingEntrancesAndZoomingExits from "../view/zoomingEntrancesAndZoomingExits/index.vue"
+import RotatingEntrancesAndRotatingExits from "../view/RotatingEntrancesAndRotatingExits/index.vue"
+import Specials from "../view/Specials/index.vue"
+import ZoomingEntrancesAndZoomingExits from "../view/ZoomingEntrancesAndZoomingExits/index.vue"
+import SlidingEntrancesSlidingExits from "../view/SlidingEntrancesSlidingExits/index.vue"
 
 import AboutView from '../view/AboutView/index.vue'
 
@@ -42,6 +43,7 @@ const routes = [
     { path: '/rotatingEntrancesAndRotatingExits', component: RotatingEntrancesAndRotatingExits, meta: { title: '旋转动画' } },
     { path: '/specials', component: Specials, meta: { title: '特殊效果' } },
     { path: '/zoomingEntrancesAndZoomingExits', component: ZoomingEntrancesAndZoomingExits, meta: { title: '放大缩小动画' } },
+    { path: '/slidingEntrancesSlidingExits', component: SlidingEntrancesSlidingExits, meta: { title: '滑入滑出动画' } },
 
     // { path: '/about', component: AboutView },
 ]

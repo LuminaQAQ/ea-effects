@@ -25,6 +25,9 @@
   <my-route to="/zoomingEntrancesAndZoomingExits">
     Animate | 放大缩小动画
   </my-route>
+  <my-route to="/slidingEntrancesSlidingExits">
+    Animate | 滑入滑出动画
+  </my-route>
 </template>
 
 <script setup>

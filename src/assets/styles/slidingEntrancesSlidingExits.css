@@ -1,0 +1,119 @@
+/* ------- slideInUp 滑动进入-从上 ------- */
+/* #region  */
+.slideInUp {
+    animation: slideInUp .5s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(-200%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- slideInLeft 滑动进入-从左 ------- */
+/* #region  */
+.slideInLeft {
+    animation: slideInLeft .5s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-200%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- slideInRight 滑动进入-从右 ------- */
+/* #region  */
+.slideInRight {
+    animation: slideInRight .5s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(200%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- slideInDown 滑动进入-从下 ------- */
+/* #region  */
+.slideInDown {
+    animation: slideInDown .5s ease-out;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(200%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- slideOutDown 滑动退出-向下 ------- */
+/* #region  */
+.slideOutDown {
+    animation: slideOutDown .75s ease-out;
+}
+
+@keyframes slideOutDown {
+    to {
+        transform: translateY(200%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- slideOutLeft 滑动退出-向左 ------- */
+/* #region  */
+.slideOutLeft {
+    animation: slideOutLeft .75s ease-out;
+}
+
+@keyframes slideOutLeft {
+    to {
+        transform: translateX(-200%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- slideOutRight 滑动退出-向右 ------- */
+/* #region  */
+.slideOutRight {
+    animation: slideOutRight .5s ease-out;
+}
+
+@keyframes slideOutRight {
+    to {
+        transform: translateX(200%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */
+
+/* ------- slideInDown 滑动退出-向上 ------- */
+/* #region  */
+.slideOutUp {
+    animation: slideOutUp .5s ease-out;
+}
+
+@keyframes slideOutUp {
+    to {
+        transform: translateY(-200%);
+    }
+}
+
+/* #endregion */
+/* ------- end  ------- */

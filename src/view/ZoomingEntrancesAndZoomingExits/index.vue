@@ -1,5 +1,5 @@
 <style lang="scss">
-@import url(../../assets/styles/zoomingEntrancesAndZoomingExits.css);
+@import url(../../assets/styles/slidingEntrancesSlidingExits.css);
 
 .part {
   display: flex;
