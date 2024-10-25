@@ -1,196 +1,136 @@
 <style lang="scss">
-@mixin three {
-  transform-style: preserve-3d;
-  transform-origin: center center;
-}
-.index-container {
-  @include three;
+@import "/atom-one-dark.css";
 
-  position: relative;
+:root {
+  // 基础（basic）
+  --width: 100px;
+  --height: 100px;
 
-  width: 100%;
-  height: 100%;
-
-  background-color: #ffecd3;
-
-  perspective: 100px;
-
-  overflow: hidden;
-
-  .router-text {
-    @include three;
-
-    position: absolute;
-    cursor: pointer;
-
-    left: 50%;
-    top: 50%;
-
-    font-size: 1.5rem;
-    color: rgb(254, 254, 254);
-    text-shadow: 3px 3px 1px #b1b1b1;
-    // transform: rotateX(30deg) rotate(30deg);
-    transition: transform 0.3s, text-shadow 0.3s;
-
-    &:hover {
-      transform: rotateX(30deg) rotate(30deg) translateZ(2.5rem);
-    }
-  }
-
-  .road {
-    @include three;
-    z-index: 1;
-    box-sizing: border-box;
-    position: absolute;
-    top: 40%;
-    bottom: 40%;
-    left: -150%;
-    right: 150%;
-
-    width: 400%;
-    height: 8rem;
-
-    background-color: #4c4c4c;
-    box-shadow: 0 20px 10px 10px #4c4c4ced;
-
-    border: 0.5rem solid #fefdfa;
-
-    transform: rotate(-35deg) translateX(-2.5%);
-
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-
-      width: 125%;
-      height: 0;
-
-      border: 0.1rem solid #fefdfa;
-
-      top: 50%;
-    }
-
-    .tree {
-      position: absolute;
-      width: 10rem;
-      height: 10rem;
-      left: 50%;
-      top: -170%;
-
-      transform: rotate(30deg);
-
-      img {
-        width: 100%;
-        height: 100%;
-
-        object-fit: cover;
-      }
-    }
-
-    .house {
-      position: absolute;
-      left: 56%;
-      top: 130%;
-
-      transform: rotate(35deg);
-
-      mask-image: url(../../assets/imgs/屋子.png);
-      mask-repeat: no-repeat;
-      mask-position: center center;
-      mask-size: cover;
-
-      background-color: #4c4c4c;
-
-      width: 10rem;
-      height: 10rem;
-
-      img {
-        width: 100%;
-        height: 100%;
-
-        object-fit: cover;
-      }
-    }
-  }
-
-  .beach {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: linear-gradient(
-      -20deg,
-      #ffecd3 50%,
-      #a8cfb0,
-      #a2d4c4,
-      #14a69d
-    );
-    background-size: 200% 200%;
-    width: 100%;
-    height: 70%;
-    background-position: center center;
-    background-size: cover;
-
-    border-bottom-right-radius: 50%;
-
-    animation: sea 4s infinite alternate-reverse ease-out;
-
-    .creation {
-      position: absolute;
-      width: 2rem;
-      height: 2rem;
-
-      img {
-        width: 100%;
-        height: 100%;
-
-        object-fit: cover;
-      }
-    }
-
-    .star {
-      transform: rotateX(60deg);
-      top: 50%;
-
-      &:nth-of-type(1) {
-        left: 10%;
-      }
-
-      &:nth-of-type(2) {
-        left: 15%;
-      }
-    }
-  }
+  // 阴影（box-shadow）
+  --box-shadow-x-skew: 0px;
+  --box-shadow-y-skew: 0px;
+  --box-shadow-blur-rad: 0px;
+  --box-shadow-diffusion-rad: 0px;
+  --box-shadow-diffusion-color: inherit;
 }
 
-@keyframes sea {
-  from {
-    background-size: 300% 300%;
-  }
+.adjustor-box {
+  width: var(--width);
+  height: var(--height);
 
-  to {
-    background-size: 100% 100%;
-  }
+  box-shadow: var(--box-shadow-x-skew);
+
+  border: 1px solid black;
+
+  transition: all 0.3s;
 }
 </style>
 
 <template>
-  <div class="index-container">
-    <section class="router-text">首页</section>
-    <section class="road">
-      <div class="tree">
-        <img src="../../assets/imgs/树.png" alt="海星-红" />
-      </div>
-      <!-- <div class="house"></div> -->
-    </section>
-    <section class="beach">
-      <div class="star creation">
-        <img src="../../assets/imgs/海星-红.png" alt="海星-红" />
-      </div>
-      <div class="star creation">
-        <img src="../../assets/imgs/海星-蓝.png" alt="海星-红" />
-      </div>
-    </section>
+  <div class="home-container">
+    <div class="effect-preview">
+      <div class="adjustor-box" ref="boxEl"></div>
+      <pre>
+        <code ref="codeBlock" class="code language-css">
+          width: {{option.basic.width}}px;
+          height: {{option.basic.height}}px;
+        </code>
+      </pre>
+    </div>
+    <div class="effect-function">
+      <ea-collapse ref="collapseEl" id="normalCollapse" active="1, 2">
+        <ea-collapse-item title="基础">
+          <SgAdjustor
+            label="盒子宽度(width)："
+            units="px"
+            :value="option.basic.width"
+            @value-change="handler.basic.handleWidth"
+          />
+          <SgAdjustor
+            label="盒子高度(height)："
+            units="px"
+            :value="option.basic.height"
+            @value-change="handler.basic.handleHeight"
+          />
+        </ea-collapse-item>
+        <ea-collapse-item title="阴影（box-shadow）">
+          <SgAdjustor
+            label="阴影水平偏移: "
+            units="px"
+            :value="option.basic.width"
+            @value-change="handler.basic.handleWidth"
+          />
+        </ea-collapse-item>
+        <ea-collapse-item title="标题3">
+          <div>内容3</div>
+        </ea-collapse-item>
+      </ea-collapse>
+    </div>
   </div>
 </template>
 
-<script setup></script>
+<script lang="ts" setup>
+import { onMounted, reactive, Ref, ref } from "vue";
+
+import SgAdjustor from "../../components/SgAdjustor.vue";
+
+import "easy-component-ui/components/ea-collapse/index.js";
+
+import "highlight.js/styles/default.css";
+
+import hljs from "highlight.js/lib/core";
+import css from "highlight.js/lib/languages/css";
+
+hljs.registerLanguage("css", css);
+
+const collapseEl: Ref<HTMLElement> = ref(null);
+const boxEl: Ref<HTMLElement> = ref(null);
+const codeBlock: Ref<HTMLElement> = ref(null);
+
+let option = reactive(
+  {
+    basic: {
+      width: 100,
+      height: 100,
+    },
+    boxShadow: {
+      
+    }
+  },
+  { deep: true }
+);
+
+/**
+ * 设置css变量及更新值
+ * @param {String} settingType 输入框的分类（option[settingType]）
+ * @param {String} settingOption 输入框的值（option[settingType][settingOption]）
+ * @param {String} name 变量名
+ * @param {String} value 属性值
+ * @param {String} units 属性值的单位
+ */
+const handleStyle = (settingType, settingOption, name, value, units) => {
+  option[settingType][settingOption] = value;
+  boxEl.value.style.setProperty(name, value + units);
+};
+
+const handler = {
+  basic: {
+    handleWidth(val) {
+      handleStyle("basic", "width", "--width", val, "px");
+    },
+    handleHeight(val) {
+      handleStyle("basic", "height", "--height", val, "px");
+    },
+  },
+};
+
+onMounted(() => {
+  hljs.highlightElement(codeBlock.value);
+
+  collapseEl.value.active = Array.from(collapseEl.value.children)
+    .map((item) => {
+      return item.name;
+    })
+    .join(",");
+});
+</script>

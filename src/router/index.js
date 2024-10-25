@@ -25,8 +25,8 @@ import SlidingEntrancesSlidingExits from "../view/SlidingEntrancesSlidingExits/i
 import AboutView from '../view/AboutView/index.vue'
 
 const routes = [
-    // { path: '/', component: HomeView, meta: { title: '主页' } },
-    { path: '/', redirect: "/2DTransitions", meta: { title: '主页' } },
+    { path: '/', component: HomeView, meta: { title: '主页' } },
+    // { path: '/', redirect: "/2DTransitions", meta: { title: '主页' } },
     { path: '/2DTransitions', component: TwoDTransitions, meta: { title: '2D 过渡动画' } },
     { path: '/backgroundTransitions', component: BackgroundTransitions, meta: { title: '背景过渡动画' } },
     { path: '/borderTransitions', component: BorderTransitions, meta: { title: '边框过渡动画' } },
